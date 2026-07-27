@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Award, CheckCircle2, Heart, ShieldCheck, Smartphone } from "lucide-react"
+import { ArrowRight, Award, CheckCircle2, Heart, ShieldCheck } from "lucide-react"
 
 import { PageHero } from "@/components/PageHero"
 import { SectionHeading } from "@/components/SectionHeading"
@@ -27,7 +27,7 @@ export default async function HomePage() {
             </span>
           </span>
         }
-        subtitle={hero?.subtitle || "We provide accessible financial literacy learning opportunities, equipping students, families, and communities with the tools to thrive."}
+        subtitle={hero?.subtitle || "We make financial education accessible through engaging programs and practical resources, helping students, families, and communities build the knowledge and confidence to make informed financial decisions."}
         backgroundImage={hero?.imageUrl || "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop"}
         actions={hero?.actionJson?.length ? [...hero.actionJson] : [
           { label: "Explore Programs", href: "/programs", variant: "brandGold" },
@@ -40,8 +40,8 @@ export default async function HomePage() {
         <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-12 gap-y-6 px-4 text-sm font-bold uppercase tracking-[0.22em] text-slate-600 sm:px-6 lg:px-8">
           {((trustBar?.itemsJson as string[] | undefined) || [
             "Registered 501(c)(3) Nonprofit",
-            "Inspired by FDIC Initiatives",
-            "100% Free Public Programs",
+            "Member of the FDIC Money Smart Alliance",
+            "Real-World Financial Learning",
           ]).map((item, index) => {
             const Icon = [ShieldCheck, Award, Heart][index] || ShieldCheck
             return (
@@ -63,13 +63,13 @@ export default async function HomePage() {
                 Measurable Community Impact.
               </h2>
               <p className="mt-6 text-lg font-medium leading-relaxed text-slate-600">
-                {impactStats?.subtitle || "Our commitment to financial literacy and youth leadership translates into real-world outcomes for our community."}
+                {impactStats?.subtitle || "Our programs create measurable outcomes for students, volunteers, and the communities we serve."}
               </p>
               <Link
-                href="/news"
+                href="/programs"
                 className="mt-8 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.22em] text-blue-600 transition-colors hover:text-blue-800"
               >
-                Read Impact Stories <ArrowRight className="size-4" />
+                Explore Programs <ArrowRight className="size-4" />
               </Link>
             </div>
             <div className="grid md:w-2/3 grid-cols-2 gap-4 md:gap-6">
@@ -101,7 +101,7 @@ export default async function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Core Initiatives."
-            subtitle={initiatives?.subtitle || "Purpose-built educational frameworks designed for sustainable growth."}
+            subtitle={initiatives?.subtitle || "Practical programs designed to build lifelong financial confidence."}
           />
           <div className="mt-16 grid gap-x-8 gap-y-12 md:grid-cols-3">
             {initiativeCards.map((initiative) => (
@@ -130,7 +130,7 @@ export default async function HomePage() {
                   {initiative.description}
                 </p>
                 <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold uppercase tracking-[0.22em] text-blue-600">
-                  Explore Initiative <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                  Learn More <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                 </span>
               </Link>
             ))}
@@ -146,13 +146,13 @@ export default async function HomePage() {
         <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-16 px-4 sm:px-6 lg:flex-row lg:px-8">
           <div className="lg:w-1/2">
             <span className="block text-sm font-bold uppercase tracking-[0.24em] text-amber-300">
-              The Digital Experience
+              The FinMentor App
             </span>
             <h2 className="mt-6 font-heading text-4xl font-bold tracking-tight md:text-5xl">
               {appSection?.title || "Learn, Participate, and Track Your Journey."}
             </h2>
             <p className="mt-8 text-lg font-medium leading-relaxed text-blue-100/80">
-              {appSection?.subtitle || "The Finmentor app is your dedicated secure portal to reserve courses, track volunteer hours, and manage your certificates."}
+              {appSection?.subtitle || "The FinMentor app lets you register for courses, track volunteer hours, and securely manage your certificates—all in one place."}
             </p>
             <ul className="mt-10 space-y-5">
               {appFeatureList.map((item) => (
@@ -164,16 +164,30 @@ export default async function HomePage() {
                 </li>
               ))}
             </ul>
-            <Link
-              href="/app"
-              className={cn(
-                buttonVariants({ variant: "outline", size: "lg" }),
-                "mt-10 border-transparent text-[#0a1128] hover:bg-slate-200"
-              )}
-            >
-              <Smartphone className="mr-2 size-5" />
-              Discover the App
-            </Link>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="https://apps.apple.com/cn/app/fin-mentor/id6737214681"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0a1128] px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-slate-800"
+              >
+                <svg viewBox="0 0 24 24" className="mr-2 size-5" fill="currentColor">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                App Store
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.courseappAnd.finmentor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0a1128] px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-slate-800"
+              >
+                <svg viewBox="0 0 24 24" className="mr-2 size-5" fill="currentColor">
+                  <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.61 6.115V6.806l8.308 5.901zm3.83-3.83l2.79 2.79c.243.243.243.635 0 .878l-2.79 2.79-2.301-2.302 2.301-2.303zM5.393 3.527l8.308 5.901-2.302 2.302-8.308-5.901 2.302-2.302z"/>
+                </svg>
+                Google Play
+              </a>
+            </div>
           </div>
 
           <div className="flex justify-center lg:w-1/2 [perspective:1200px]">
@@ -182,19 +196,38 @@ export default async function HomePage() {
               style={{ transform: "rotateY(-10deg) rotateX(5deg)" }}
             >
               <div className="absolute left-1/2 top-0 z-20 mx-auto h-7 w-32 -translate-x-1/2 rounded-b-2xl bg-slate-800" />
-              <div className="flex flex-1 flex-col gap-4 bg-slate-50 p-5 pt-12">
-                <div className="flex h-28 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 text-sm font-bold text-white shadow-inner">
-                  Dashboard UI Placeholder
+              <div className="rounded-b-3xl bg-blue-600 px-6 pb-8 pt-14 text-white shadow-sm">
+                <h3 className="font-heading text-2xl font-bold tracking-tight">Hello, Student!</h3>
+                <p className="mt-1 text-sm font-medium text-blue-100">Ready to learn today?</p>
+              </div>
+              <div className="flex flex-1 flex-col gap-4 bg-slate-50 p-6">
+                <div className="mb-2 flex items-center justify-between">
+                  <span className="font-heading text-lg font-bold tracking-tight text-slate-900">
+                    My Schedule
+                  </span>
+                  <span className="text-sm font-bold text-blue-600">See All</span>
                 </div>
-                <div className="rounded-2xl border border-slate-200/60 bg-white p-4 shadow-sm">
-                  <div className="mb-3 h-3 w-1/2 rounded-full bg-slate-200" />
-                  <div className="h-2 w-3/4 rounded-full bg-slate-100" />
+                <div className="rounded-3xl border border-slate-200/60 bg-white p-5 shadow-sm">
+                  <div className="text-sm font-extrabold tracking-tight text-slate-900">
+                    Credit Basics Workshop
+                  </div>
+                  <div className="mt-1.5 text-xs font-medium text-slate-500">Tomorrow, 4:00 PM</div>
                 </div>
-                <div className="rounded-2xl border border-slate-200/60 bg-white p-4 shadow-sm">
-                  <div className="mb-3 h-3 w-1/3 rounded-full bg-slate-200" />
-                  <div className="h-2 w-2/3 rounded-full bg-slate-100" />
+                <div className="rounded-3xl border border-slate-200/60 bg-white p-5 shadow-sm opacity-60">
+                  <div className="text-sm font-extrabold tracking-tight text-slate-900">
+                    Budgeting 101
+                  </div>
+                  <div className="mt-1.5 text-xs font-medium text-slate-500">Completed</div>
                 </div>
-                <div className="mt-auto h-32 rounded-2xl border border-emerald-200/50 bg-gradient-to-br from-emerald-50 to-emerald-100" />
+                <div className="mt-auto flex items-center justify-between rounded-3xl border border-emerald-100 bg-emerald-50 p-5">
+                  <div>
+                    <div className="text-sm font-bold text-emerald-900">Volunteer Hours</div>
+                    <div className="mt-1 text-3xl font-black tracking-tight text-emerald-600">
+                      12.5 <span className="text-sm font-bold text-emerald-600/70">hrs</span>
+                    </div>
+                  </div>
+                  <Award className="size-10 text-emerald-500" />
+                </div>
               </div>
             </div>
           </div>

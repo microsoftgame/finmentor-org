@@ -9,9 +9,9 @@ import { contactReasons } from "@/lib/site-data"
 
 export async function generateMetadata() {
   return getPageMetadata("contact", {
-    title: "Contact Finmentor",
+    title: "Contact FinMentor",
     description:
-      "Contact Finmentor for partnerships, sponsorships, volunteer interest, media, and program questions.",
+      "Contact FinMentor for partnerships, sponsorships, volunteer interest, media, and program questions.",
   })
 }
 
@@ -54,7 +54,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="text-lg font-bold text-slate-900">Organization</h4>
                     <p className="mt-1 font-medium leading-relaxed text-slate-600">
-                      Finmentor Money Smart Organization
+                      FinMentor Money Smart Organization
                       <br />
                       <span className="text-sm text-slate-500">A CA Nonprofit Public Benefit Corp.</span>
                     </p>
@@ -68,9 +68,9 @@ export default function ContactPage() {
                   <div>
                     <h4 className="text-lg font-bold text-slate-900">Address</h4>
                     <p className="mt-1 font-medium leading-relaxed text-slate-600">
-                      123 Education Way, Suite 100
+                      1190 Roosevelt #200
                       <br />
-                      Orange County, CA 92653
+                      Irvine, CA 92620
                     </p>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                     <Label htmlFor="fullName">
                       Full Name <span className="text-red-500">*</span>
                     </Label>
-                    <Input id="fullName" type="text" placeholder="Jane Doe" required />
+                    <Input id="fullName" type="text" placeholder="John Smith" required />
                   </div>
                   <div>
                     <Label htmlFor="organization">
@@ -108,7 +108,7 @@ export default function ContactPage() {
                   <Label htmlFor="email">
                     Email Address <span className="text-red-500">*</span>
                   </Label>
-                  <Input id="email" type="email" placeholder="jane@example.com" required />
+                  <Input id="email" type="email" placeholder="johnsmith@example.com" required />
                 </div>
 
                 <div>
