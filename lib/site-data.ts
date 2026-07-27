@@ -19,7 +19,7 @@ export const initiativeCards = [
     tag: "CURRICULUM",
     title: "Money Smart Financial Literacy Program",
     description:
-      "An introductory financial literacy course focused on practical money skills for high school students.",
+      "Practical financial education that helps high school students build essential skills in budgeting, saving, credit, and responsible money management.",
     href: "/programs",
   },
   {
@@ -823,6 +823,7 @@ export const ourPeople: readonly PersonRecord[] = [
       },
     ],
     approach: "Well-coordinated volunteers are the heart of accessible community education.",
+    photo: "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/genghao-wang.jpg",
     photoAlt: "Nathan Wang, Assistant Treasurer and Director of Volunteer Management.",
   },
   {
