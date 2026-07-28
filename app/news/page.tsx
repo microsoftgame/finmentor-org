@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils"
 export async function generateMetadata() {
   return getPageMetadata("news", {
     title: "News & Impact",
-    description: "Read Finmentor program updates, impact stories, and community milestones.",
+    description: "Read FinMentor program updates, impact stories, and community milestones.",
   })
 }
 
@@ -24,10 +24,10 @@ export default async function NewsPage() {
           News & Impact
         </span>
         <h1 className="mt-4 font-heading text-5xl font-bold tracking-tight text-slate-900 md:text-7xl">
-          Stories, milestones, and community proof points.
+          Stories, milestones, and community impact.
         </h1>
         <p className="mx-auto mt-6 max-w-3xl text-xl font-medium leading-relaxed text-slate-600">
-          This page keeps gv1&apos;s visual polish while carrying the richer program updates, impact snapshots, and human stories that made v1 feel more complete.
+          Explore stories, event highlights, and community milestones that showcase how financial education is making a difference.
         </p>
       </div>
 
@@ -70,7 +70,7 @@ export default async function NewsPage() {
               Latest Updates
             </h2>
             <p className="mt-2 text-lg font-medium text-slate-600">
-              Recent highlights, announcements, and field notes from our programs.
+              Recent highlights, announcements, and impact stories from our programs.
             </p>
           </div>
 
@@ -124,7 +124,7 @@ export default async function NewsPage() {
               Our Impact at a Glance
             </h2>
             <p className="mt-3 text-lg font-medium text-blue-100/75">
-              Measuring the difference we make together.
+              Numbers that reflect the growing impact of financial education.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -138,6 +138,9 @@ export default async function NewsPage() {
               </div>
             ))}
           </div>
+          <p className="mt-8 text-right text-xs font-medium italic text-blue-100/40">
+            Updated annually based on FinMentor program records.
+          </p>
         </div>
       </section>
 
@@ -148,7 +151,7 @@ export default async function NewsPage() {
               Impact Stories
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-lg font-medium text-slate-600">
-              Real stories from students, volunteers, and families whose lives changed through practical education.
+              Stories that showcase how financial education is making a difference.
             </p>
           </div>
 
@@ -187,7 +190,7 @@ export default async function NewsPage() {
             Support the work behind the stories.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg font-medium leading-relaxed text-slate-900/75">
-            Your support helps us keep expanding free programs, volunteer training, and community-centered financial education.
+            Your support helps us expand free programs, strengthen volunteer training, and make financial education more accessible to students and families.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/support" className={cn(buttonVariants({ size: "lg" }), "bg-slate-950 text-white hover:bg-slate-800")}>
@@ -200,7 +203,7 @@ export default async function NewsPage() {
                 "border-slate-950 text-slate-950 hover:bg-slate-950 hover:text-white"
               )}
             >
-              Stay Connected
+              Contact Us
               <ArrowRight className="ml-2 size-4" />
             </Link>
           </div>

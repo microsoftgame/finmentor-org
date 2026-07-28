@@ -42,12 +42,12 @@ export default async function ProgramsPage() {
               const programs = [
                 {
                   tag: "CURRICULUM",
-                  title: "Money Smart Financial Literacy Course 1",
+                  title: "Money Smart Financial Literacy Program",
                   slug: "money-smart-course-1",
-                  summary: "An introductory financial literacy course focused on practical money skills for high school students.",
+                  summary: "An introductory financial literacy program focused on practical money skills for high school students.",
                   bullets: ["Financial Decision-Making", "Spending Awareness", "Saving Strategies", "Responsible Money Habits"],
                   audience: "High School Students (Grades 9–12)",
-                  image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/programs/money-smart-course-1.jpg",
+                  image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162834/finmentor/programs/program-image-for-substitution.png",
                   alt: "Students in a classroom learning financial literacy",
                   accent: "bg-blue-500",
                 },

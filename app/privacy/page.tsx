@@ -5,7 +5,7 @@ export async function generateMetadata() {
 
   return {
     title: "Privacy Policy",
-    description: "Privacy policy and student data handling information for Finmentor.",
+    description: "Privacy policy and student data handling information for FinMentor.",
     alternates: { canonical: `${settings.siteUrl.replace(/\/$/, "")}/privacy` },
   }
 }

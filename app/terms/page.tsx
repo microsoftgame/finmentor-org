@@ -5,7 +5,7 @@ export async function generateMetadata() {
 
   return {
     title: "Terms of Service",
-    description: "Website terms of service for Finmentor.",
+    description: "Website terms of service for FinMentor.",
     alternates: { canonical: `${settings.siteUrl.replace(/\/$/, "")}/terms` },
   }
 }

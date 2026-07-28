@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils"
 export async function generateMetadata() {
   return getPageMetadata("news", {
     title: "Featured Impact Story",
-    description: "Read the latest featured Finmentor impact story.",
+    description: "Read the latest featured FinMentor impact story.",
   })
 }
 
@@ -69,7 +69,7 @@ export default async function NewsFeaturedPage() {
                     <User className="size-6 text-slate-500" />
                   </div>
                   <div>
-                    <p className="font-bold text-slate-900">Finmentor Team</p>
+                    <p className="font-bold text-slate-900">FinMentor Team</p>
                     <p className="text-sm font-medium text-slate-500">Published update</p>
                   </div>
                 </div>

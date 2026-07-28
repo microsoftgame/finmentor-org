@@ -46,7 +46,7 @@ export function PageHero({
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="lg:w-3/4 xl:w-2/3">
           {eyebrow ? (
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-blue-100 backdrop-blur-md">
+            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-bold capitalize tracking-[0.24em] text-blue-100 backdrop-blur-md">
               <span className="inline-block size-2 rounded-full bg-amber-300" />
               {eyebrow}
             </div>

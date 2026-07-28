@@ -12,9 +12,9 @@ const icons = [Users, BookOpen, Heart, Smartphone]
 
 export async function generateMetadata() {
   return getPageMetadata("support", {
-    title: "Support Finmentor",
+    title: "Support FinMentor",
     description:
-      "Support Finmentor's free financial literacy programs, educational materials, and student leadership development.",
+      "Support FinMentor's free financial literacy programs, educational materials, and student leadership development.",
   })
 }
 
@@ -36,7 +36,7 @@ export default function SupportPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a1128] via-transparent to-transparent" />
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
           <span className="block text-sm font-bold uppercase tracking-[0.24em] text-amber-300">
-            Partner With Finmentor
+            Partner With FinMentor
           </span>
           <h1 className="mt-6 font-heading text-5xl font-bold leading-tight tracking-tight md:text-7xl">
             Empowering the Next Generation Together.
@@ -45,7 +45,7 @@ export default function SupportPage() {
             Your support directly funds educational materials, workshop execution, and student leadership development in our communities.
           </p>
           <Link href="/contact" className={cn(buttonVariants({ variant: "brandGold", size: "lg" }), "mt-12")}>
-            Inquire About Sponsorship
+            Become Our Sponsor
           </Link>
         </div>
       </section>
@@ -55,16 +55,22 @@ export default function SupportPage() {
           <div className="flex flex-col gap-16 lg:flex-row lg:gap-24">
             <div className="lg:w-1/3">
               <h2 className="font-heading text-3xl font-bold tracking-tight text-slate-900">
-                Trust & Transparency
+                Verified Nonprofit Organization
               </h2>
+              <p className="mt-2 text-sm font-bold uppercase tracking-[0.18em] text-slate-500">
+                EIN: 99-5107727
+              </p>
               <Card className="mt-8 border-slate-200/60 bg-slate-50 shadow-none">
                 <CardContent>
                   <ShieldCheck className="mb-8 size-12 text-blue-600" />
-                  <ul className="space-y-5 font-medium text-slate-700">
+                  <ul className="space-y-6 font-medium text-slate-700">
                     {trustBullets.map((bullet) => (
-                      <li key={bullet} className="flex items-start gap-4">
+                      <li key={bullet.title} className="flex items-start gap-4">
                         <CheckCircle2 className="mt-0.5 size-6 shrink-0 text-emerald-500" />
-                        <span>{bullet}</span>
+                        <div>
+                          <p className="font-bold text-slate-900">{bullet.title}</p>
+                          <p className="mt-1 text-sm leading-relaxed text-slate-600">{bullet.description}</p>
+                        </div>
                       </li>
                     ))}
                   </ul>

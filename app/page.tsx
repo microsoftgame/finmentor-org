@@ -60,7 +60,7 @@ export default async function HomePage() {
           <div className="flex flex-col items-center gap-16 md:flex-row">
             <div className="md:w-1/3">
               <h2 className="font-heading text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-                Measurable Community Impact.
+                Measurable Community Impact
               </h2>
               <p className="mt-6 text-lg font-medium leading-relaxed text-slate-600">
                 {impactStats?.subtitle || "Our programs create measurable outcomes for students, volunteers, and the communities we serve."}
@@ -100,7 +100,7 @@ export default async function HomePage() {
       <section className="bg-white py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            title="Core Initiatives."
+            title="Core Initiatives"
             subtitle={initiatives?.subtitle || "Practical programs designed to build lifelong financial confidence."}
           />
           <div className="mt-16 grid gap-x-8 gap-y-12 md:grid-cols-3">
@@ -149,7 +149,7 @@ export default async function HomePage() {
               The FinMentor App
             </span>
             <h2 className="mt-6 font-heading text-4xl font-bold tracking-tight md:text-5xl">
-              {appSection?.title || "Learn, Participate, and Track Your Journey."}
+              {appSection?.title || "Learn, Participate, and Track Your Journey"}
             </h2>
             <p className="mt-8 text-lg font-medium leading-relaxed text-blue-100/80">
               {appSection?.subtitle || "The FinMentor app lets you register for courses, track volunteer hours, and securely manage your certificates—all in one place."}

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { ExternalLink, ShieldCheck } from "lucide-react"
 
@@ -14,8 +15,7 @@ export function Footer({ settings }: FooterProps) {
   const organizationLinks = footer?.organizationLinks ?? [
     { label: "About Us", href: "/about" },
     { label: "Programs", href: "/programs" },
-    { label: "Impact", href: "/news" },
-    { label: "Leadership", href: "/leadership" },
+    { label: "Our People", href: "/leadership" },
   ]
   const actionLinks = footer?.actionLinks ?? [
     { label: "Support Our Mission", href: "/support" },
@@ -29,8 +29,14 @@ export function Footer({ settings }: FooterProps) {
         <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-12 lg:gap-8">
           <div className="md:col-span-5 lg:col-span-4">
             <Link href="/" className="mb-8 flex items-center gap-3">
-              <div className="flex size-10 items-center justify-center rounded-full border border-slate-700 bg-slate-800 text-xl font-black text-white">
-                F
+              <div className="flex size-10 items-center justify-center overflow-hidden rounded-full border border-slate-700 bg-white">
+                <Image
+                  src={settings.logoUrl || "/logo.png"}
+                  alt={`${settings.brandName} logo`}
+                  width={40}
+                  height={40}
+                  className="size-10 object-cover"
+                />
               </div>
               <span className="text-xl font-extrabold uppercase tracking-[0.24em] text-white">
                 {settings.brandName}
@@ -38,11 +44,11 @@ export function Footer({ settings }: FooterProps) {
             </Link>
             <p className="pe-4 text-sm font-medium leading-relaxed text-slate-400">
               {footer?.description ??
-                "Finmentor Money Smart Organization is a registered 501(c)(3) nonprofit dedicated to financial literacy education, student leadership, and community enrichment."}
+                "FinMentor Money Smart Organization is a registered 501(c)(3) nonprofit committed to advancing financial literacy, student leadership, and community engagement."}
             </p>
             <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-emerald-900/50 bg-emerald-950/30 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-emerald-400">
               <ShieldCheck className="size-4" />
-              <span>U.S. 501(c)(3) Status</span>
+              <span>Verified 501(c)(3) Nonprofit</span>
             </div>
           </div>
 

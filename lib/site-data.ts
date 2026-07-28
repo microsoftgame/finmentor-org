@@ -9,13 +9,13 @@ export const navigationItems = [
 export const homeStats = [
   { value: "10+", label: "Programs Delivered", tone: "text-blue-600", surface: "bg-white", offset: false },
   { value: "300+", label: "Students Reached", tone: "text-amber-500", surface: "bg-white", offset: false },
-  { value: "100+", label: "Volunteers Engaged", tone: "text-emerald-600", surface: "bg-white", offset: true },
+  { value: "100+", label: "Volunteers Engaged", tone: "text-emerald-600", surface: "bg-white", offset: false },
   { value: "1000+", label: "Community Service Hours", tone: "text-slate-900", surface: "bg-white", offset: false },
 ] as const
 
 export const initiativeCards = [
   {
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/programs/money-smart-course-1.jpg",
+    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162834/finmentor/programs/program-image-for-substitution.png",
     tag: "CURRICULUM",
     title: "Money Smart Financial Literacy Program",
     description:
@@ -160,7 +160,7 @@ export const programs = [
       "Responsible Money Habits",
     ],
     audience: "High School Students (Grades 9–12)",
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/programs/money-smart-course-1.jpg",
+    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162834/finmentor/programs/program-image-for-substitution.png",
     alt: "Students in a classroom learning financial literacy",
     cta: "Learn More",
     accent: "bg-blue-500",
@@ -243,100 +243,100 @@ export const featuredStory = {
 
 export const newsUpdates = [
   {
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/updates/public-or-private-school.jpg",
-    category: "WORKSHOP",
-    date: "November 16, 2025",
-    title: "Public or Private School Student Panel Held",
-    excerpt:
-      "A student panel exploring academic experiences, extracurricular involvement, and everyday life in public and private high schools.",
-  },
-  {
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/updates/money-smart-session-2.jpg",
-    category: "PROGRAM",
-    date: "October 6, 2024",
-    title: "Money Smart Financial Literacy Course — Session 2",
-    excerpt:
-      "Students participated in Session 2 of FinMentor's Money Smart Financial Literacy Course, learning practical financial concepts through interactive classroom activities.",
-  },
-  {
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/updates/money-smart-session-3.jpg",
-    category: "PROGRAM",
-    date: "April 17, 2025",
-    title: "Money Smart Financial Literacy Course — Session 3",
-    excerpt:
-      "Session 3 continued FinMentor's Money Smart Financial Literacy Course with small-group, interactive instruction using the FDIC Money Smart curriculum.",
-  },
-  {
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/updates/fdic-headquarters-visit.jpg",
+    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162840/finmentor/updates/fdic-headquarters-student-leadership.png",
     category: "VISIT",
-    date: "May 29, 2026",
+    date: "May 2026",
     title: "FDIC Headquarters Student Leadership Visit",
     excerpt:
-      "Five FinMentor student leaders were invited to visit the FDIC Headquarters in Washington, D.C., gaining first-hand insights into financial regulation and public service careers.",
+      "Five FinMentor student leaders were invited to visit the FDIC Headquarters in Washington D.C., gaining first-hand insights into financial regulation and public service careers",
   },
   {
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/updates/entrepreneurship-competition.jpg",
-    category: "COMPETITION",
-    date: "March 22, 2025",
-    title: "FinMentor Students Excel at NextGen Entrepreneurs Competition",
+    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162851/finmentor/updates/digital-currencies-new.png",
+    category: "WORKSHOP",
+    date: "January 2026",
+    title: "Opportunities and Risks of Digital Currencies Seminar Held",
     excerpt:
-      "FinMentor students presented original business ideas at the 2025 NextGen Entrepreneurs Competition, earning second, joint third, and joint fourth place.",
+      "Students explored the opportunities and risks of digital currencies through an expert presentation, real-world industry insights, and an interactive Q&A session",
+  },
+  {
+    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162843/finmentor/updates/public-or-private-school-new.png",
+    category: "WORKSHOP",
+    date: "November 2025",
+    title: "Public or Private School Student Panel Held",
+    excerpt:
+      "A student panel exploring academic experiences, extracurricular involvement, and everyday life in public and private high schools",
   },
   {
     image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/updates/college-career-beyond.jpg",
     category: "EVENT",
-    date: "October 19, 2025",
-    title: "College, Career, & Beyond",
+    date: "October 2025",
+    title: "College, Career & Beyond",
     excerpt:
-      "Students explored college planning, internship opportunities, workplace culture, and future career pathways through presentations from professionals.",
+      "Students explored college planning, internship opportunities, workplace culture, and future career pathways through presentations from professionals",
   },
   {
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/updates/start-school-club.jpg",
-    category: "EVENT",
-    date: "January 19, 2025",
-    title: "How to Start a School Club",
+    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162846/finmentor/updates/money-smart-session3-new.png",
+    category: "PROGRAM",
+    date: "April 2025",
+    title: "Money Smart Financial Literacy Course — Session 3",
     excerpt:
-      "A community workshop featuring student speakers and guest mentor Dr. Sofia Lee, sharing experiences on founding school clubs and developing leadership skills.",
+      "Session 3 continued FinMentor's Money Smart Financial Literacy Course with small-group, interactive instruction using the FDIC Money Smart curriculum",
   },
   {
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/updates/digital-currencies-seminar.jpg",
-    category: "WORKSHOP",
-    date: "January 3, 2026",
-    title: "Opportunities and Risks of Digital Currencies Seminar Held",
-    excerpt:
-      "Students explored the opportunities and risks of digital currencies through an expert presentation, real-world industry insights, and an interactive Q&A session.",
-  },
-  {
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/updates/money-workshop.jpg",
-    category: "WORKSHOP",
-    date: "October 13, 2024",
-    title: "Who Will Look After Your Money",
-    excerpt:
-      "Students and families explored practical financial literacy concepts while hearing Steven share his journey of overcoming challenges and pursuing academic goals at UCLA.",
-  },
-  {
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/v1785112277/finmentor/updates/tesoro-high-school-club.png",
-    category: "CLUB",
-    date: "September, 2024",
-    title: "FinMentor Club Launch at Tesoro High School",
-    excerpt:
-      "A student-led club expanding practical financial education at Tesoro High School.",
-  },
-  {
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/v1785112279/finmentor/updates/sparkhub-competition.png",
+    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/updates/entrepreneurship-competition.jpg",
     category: "COMPETITION",
-    date: "March, 2025",
+    date: "March 2025",
+    title: "FinMentor Students Excel at NextGen Entrepreneurs Competition",
+    excerpt:
+      "FinMentor students presented original business ideas at the 2025 NextGen Entrepreneurs Competition, earning second, joint third, and joint fourth place",
+  },
+  {
+    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162836/finmentor/updates/program-michael-nathan.png",
+    category: "COMPETITION",
+    date: "March 2025",
     title: "First Place at the SparkHub Youth Entrepreneurial Competition",
     excerpt:
-      "Michael and Nathan earned first place after developing and presenting their startup idea to a panel of entrepreneurs and industry professionals.",
+      "Michael and Nathan earned first place after developing and presenting their startup idea to a panel of entrepreneurs and industry professionals at the SparkHub competition",
   },
   {
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/v1785112281/finmentor/updates/where-journey-began.png",
+    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162848/finmentor/updates/how-to-start-a-school-club-new.png",
+    category: "EVENT",
+    date: "January 2025",
+    title: "How to Start a School Club",
+    excerpt:
+      "A community workshop featuring student speakers and guest mentor Dr. Sofia Lee, sharing experiences on founding school clubs and developing leadership skills",
+  },
+  {
+    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162845/finmentor/updates/money-smart-session2-new.png",
+    category: "PROGRAM",
+    date: "October 2024",
+    title: "Money Smart Financial Literacy Course — Session 2",
+    excerpt:
+      "Students participated in Session 2 of FinMentor's Money Smart Financial Literacy Course, learning practical financial concepts through interactive classroom activities and group discussions",
+  },
+  {
+    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162842/finmentor/updates/who-will-look-after-your-money.png",
+    category: "WORKSHOP",
+    date: "October 2024",
+    title: "Who Will Look After Your Money",
+    excerpt:
+      "Students and families explored practical financial literacy concepts while hearing Steven share his journey of overcoming challenges and pursuing academic goals at UCLA",
+  },
+  {
+    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162850/finmentor/updates/finmentor-club-new.png",
+    category: "CLUB",
+    date: "September 2024",
+    title: "FinMentor Club Launch at Tesoro High School",
+    excerpt:
+      "A student-led club expanding practical financial education at Tesoro High School, empowering students to bring financial literacy programs to their campus and community",
+  },
+  {
+    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162838/finmentor/updates/where-journey-began-new.png",
     category: "MILESTONE",
-    date: "June, 2023",
+    date: "June 2023",
     title: "Where the FinMentor Journey Began",
     excerpt:
-      "At AAUW's national conference, our founders attended an FDIC- and FINRA-supported financial literacy session that inspired the idea behind FinMentor.",
+      "At AAUW's national conference, our founders attended an FDIC- and FINRA-supported financial literacy session that inspired the idea behind FinMentor",
   },
 ] as const
 
@@ -589,13 +589,12 @@ export const ourPeople: readonly PersonRecord[] = [
     status: "active",
     showOnWebsite: true,
     primaryTitle: "CEO and CTO",
-    secondaryTitles: ["Director of Technology and Data Management"],
     school: undefined,
     tagline: "Leading FinMentor's mission to advance financial literacy through technology and strategic execution.",
-    bio: "Michael Yang serves as Chief Executive Officer (CEO) and Director of Technology and Data Management at FinMentor. He provides organizational leadership, sets strategic direction, and oversees technology systems that support the organization's educational programs and community outreach.",
+    bio: "Michael Yang serves as Chief Executive Officer (CEO) and Chief Technology Officer (CTO) at FinMentor, leading the organization's strategic direction, technology initiatives, data management, and digital platform development.",
     extendedBio: [
-      "Michael Yang serves as Chief Executive Officer (CEO) and Director of Technology and Data Management at FinMentor. In his executive role he leads organizational strategy, coordinates team efforts, and represents FinMentor to partners and the broader community.",
-      "As Director of Technology and Data Management, he oversees the digital platforms and systems that enable program delivery, volunteer coordination, and educational resource management.",
+      "Michael Yang serves as Chief Executive Officer (CEO) and Chief Technology Officer (CTO) at FinMentor. In his executive role he leads organizational strategy, coordinates team efforts, and represents FinMentor to partners and the broader community.",
+      "As CTO, he oversees the digital platforms and systems that enable program delivery, volunteer coordination, and educational resource management.",
     ],
     focusAreas: [
       "Executive Leadership",
@@ -616,7 +615,7 @@ export const ourPeople: readonly PersonRecord[] = [
   {
     personId: "simao-shao",
     slug: "simao-shao",
-    name: "Simao Shao",
+    name: "Simon Shao",
     section: "executive",
     sectionOrder: 1,
     profileOrder: 2,
@@ -625,9 +624,9 @@ export const ourPeople: readonly PersonRecord[] = [
     primaryTitle: "Vice President and COO",
     school: undefined,
     tagline: "Programs, events, and volunteers — the operating rhythm behind FinMentor.",
-    bio: "Simao Shao serves as Vice President and Chief Operating Officer (COO) at FinMentor, leading educational programs, community events, and volunteer engagement across the organization.",
+    bio: "Simon Shao serves as Vice President and Chief Operating Officer (COO) at FinMentor, leading educational programs, community events, and volunteer engagement across the organization.",
     extendedBio: [
-      "Simao Shao serves as Vice President and Chief Operating Officer (COO), leading educational programs, community events, and volunteer engagement. His work spans program planning, event execution, volunteer recruitment, training, and on-site operations.",
+      "Simon Shao serves as Vice President and Chief Operating Officer (COO), leading educational programs, community events, and volunteer engagement. His work spans program planning, event execution, volunteer recruitment, training, and on-site operations.",
       "He has led several signature initiatives including the Money Smart financial literacy series and cross-cultural volunteer programs that strengthen community engagement.",
     ],
     focusAreas: [
@@ -648,7 +647,7 @@ export const ourPeople: readonly PersonRecord[] = [
     ],
     approach: "Run programs the way you'd want them run for your own family — thoughtful, prepared, and welcoming.",
     photo: "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/simao-shao.jpg",
-    photoAlt: "Simao Shao, Vice President and COO.",
+    photoAlt: "Simon Shao, Vice President and COO.",
   },
   {
     personId: "kaiqing-dong",
@@ -769,10 +768,10 @@ export const ourPeople: readonly PersonRecord[] = [
     showOnWebsite: true,
     primaryTitle: "Director of Youth Financial Literacy Programs",
     school: "Irvine High School",
-    tagline: "Empowering youth through financial education and community service.",
-    bio: "Haoye Li serves as Youth Financial Literacy Program Leader at FinMentor, where he supports financial education initiatives that help young people develop essential money management skills and financial awareness.",
+    tagline: "Empowering youth through financial education and community engagement.",
+    bio: "Haoye Li serves as Director of Youth Financial Literacy Programs at FinMentor, supporting youth financial education initiatives and community engagement.",
     extendedBio: [
-      "Haoye Li serves as Youth Financial Literacy Program Leader at FinMentor, where he supports financial education initiatives that help young people develop essential money management skills and financial awareness.",
+      "Haoye Li serves as Director of Youth Financial Literacy Programs at FinMentor, where he supports financial education initiatives that help young people develop essential money management skills and financial awareness.",
       "A student at Irvine High School, Haoye is also a dedicated clarinetist involved in his school's music programs. His interests in finance, music, and community service reflect his commitment to continuous learning, teamwork, and making a positive impact.",
     ],
     focusAreas: [
@@ -803,10 +802,10 @@ export const ourPeople: readonly PersonRecord[] = [
     primaryTitle: "Assistant Treasurer and Director of Volunteer Management",
     school: undefined,
     tagline: "Supporting financial operations and volunteer coordination for FinMentor's programs.",
-    bio: "Nathan Wang serves as Assistant Treasurer / Deputy CFO and Director of Volunteer Management at FinMentor. He supports financial operations while leading volunteer recruitment, training, and coordination efforts.",
+    bio: "Nathan Wang serves as Assistant Treasurer and Director of Volunteer Management at FinMentor. He supports financial operations and volunteer coordination for the organization's programs.",
     extendedBio: [
-      "Nathan Wang serves as Assistant Treasurer / Deputy CFO, supporting the organization's financial planning and operational coordination.",
-      "As Director of Volunteer Management, he oversees volunteer recruitment, training, and day-to-day coordination to ensure program success.",
+      "Nathan Wang serves as Assistant Treasurer and Director of Volunteer Management at FinMentor. He supports financial operations while leading volunteer recruitment, training, and day-to-day coordination to ensure program success.",
+      "As Director of Volunteer Management, he oversees volunteer recruitment, training, and coordination efforts across all FinMentor programs.",
     ],
     focusAreas: [
       "Financial Operations",

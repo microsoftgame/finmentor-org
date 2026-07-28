@@ -104,7 +104,8 @@ export type NewsImpact = {
 export type Program = {
   tag?: string
   title: string
-  description: string
+  description?: string
+  summary?: string
   bullets: readonly string[]
   audience?: string
   image: string
@@ -117,6 +118,7 @@ export type Program = {
   sectionsJson?: readonly { heading: string; body: string }[]
   seoTitle?: string
   seoDescription?: string
+  hasCustomDetail?: boolean
 }
 
 export type LeadershipEntry = {
@@ -133,14 +135,59 @@ export type LeadershipEntry = {
   sortOrder?: number
 }
 
+export type OrganizationUnit = {
+  title: string
+  slug: string
+  parentUnit?: string
+  description?: string
+  responsibilities?: string
+  isPublic?: boolean
+  sortOrder?: number
+}
+
+export type PersonProfile = {
+  title: string
+  slug: string
+  formalTitle: string
+  organizationUnit?: string
+  profileImageUrl?: string
+  profileImageAlt?: string
+  summary: string
+  biography?: string
+  performance?: string
+  contributions?: string
+  achievementsJson?: readonly string[]
+  honorsJson?: readonly string[]
+  publicContact?: string
+  publicVisibility?: "public" | "hidden" | "noindex"
+  seoTitle?: string
+  seoDescription?: string
+  ogImageUrl?: string
+  sortOrder?: number
+}
+
+export type LeadershipPosition = {
+  title: string
+  slug: string
+  organizationUnit?: string
+  description?: string
+  responsibilities?: string
+  requirements?: string
+  experience?: string
+  assignedPerson?: string
+  applicationStatus: "open" | "filled" | "closed"
+  applicationUrl?: string
+  sortOrder?: number
+}
+
 const fallbackSiteSettings: SiteSettings = {
-  brandName: "Finmentor",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+  brandName: "FinMentor",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://finmentors.org",
   logoUrl: "/logo.png",
   faviconUrl: "/favicon.ico",
-  defaultSeoTitle: "Finmentor | Youth Financial Education",
+  defaultSeoTitle: "FinMentor | Youth Financial Education",
   defaultSeoDescription:
-    "Finmentor provides accessible financial literacy learning opportunities for students, families, and communities.",
+    "FinMentor provides accessible financial literacy learning opportunities for students, families, and communities.",
   contactEmail: "contact@finmentors.org",
   navigationJson: navigationItems,
 }
@@ -376,6 +423,11 @@ export async function getFeaturedArticleContent() {
 }
 
 export async function getLeadershipContent() {
+  const organizationUnits = sortByOrder(await getPublishedCollection<OrganizationUnit>("organization_units", []))
+    .filter((item) => item.isPublic !== false)
+  const people = sortByOrder(await getPublishedCollection<PersonProfile>("people", []))
+    .filter((item) => item.publicVisibility !== "hidden")
+  const positions = sortByOrder(await getPublishedCollection<LeadershipPosition>("leadership_positions", []))
   const records = sortByOrder(await getPublishedCollection<LeadershipEntry>("leadership", []))
   const advisors = records
     .filter((item) => item.entryType === "adult_advisor")
@@ -398,12 +450,51 @@ export async function getLeadershipContent() {
   const bullets = records.filter((item) => item.entryType === "mission_bullet").map((item) => item.description || item.title)
 
   return {
+    organizationUnits,
+    people: people.length
+      ? people
+      : (advisors.length ? advisors : adultAdvisors).map((advisor): PersonProfile => ({
+          title: advisor.name,
+          slug: toSlug(advisor.name),
+          formalTitle: advisor.role,
+          organizationUnit: advisor.organization,
+          profileImageUrl: advisor.image,
+          summary: `${advisor.name} supports FinMentor as ${advisor.role}.`,
+          publicVisibility: "public" as const,
+        })),
+    positions: positions.length
+      ? positions
+      : (tracks.length ? tracks : leadershipTracks).map((track): LeadershipPosition => ({
+          title: track.title,
+          slug: toSlug(track.title),
+          description: track.description,
+          responsibilities: track.responsibilities.join("; "),
+          applicationStatus: "open" as const,
+        })),
     adultAdvisors: advisors.length ? advisors : adultAdvisors,
     leadershipTracks: tracks.length ? tracks : leadershipTracks,
     leadershipBenefits: benefits.length ? benefits : leadershipBenefits,
     leadershipWhyBullets: bullets.length ? bullets : leadershipWhyBullets,
     missionConnectionBullets,
   }
+}
+
+export async function getPersonBySlug(slug: string) {
+  const records = await getPublishedRecords<PersonProfile>("people")
+  const match = records.find((record) => record.slug === slug)
+  const person = match ? parseContentData(match) : null
+
+  if (person && person.publicVisibility !== "hidden") {
+    return withRecordSlug(match!, person)
+  }
+
+  const leadership = await getLeadershipContent()
+  return leadership.people.find((item) => item.slug === slug) ?? null
+}
+
+export async function getPersonStaticParams() {
+  const leadership = await getLeadershipContent()
+  return leadership.people.map((person) => ({ slug: person.slug }))
 }
 
 export const fallbackPageSections = {

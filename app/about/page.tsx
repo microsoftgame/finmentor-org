@@ -113,7 +113,7 @@ export default function AboutPage() {
           <div className="relative">
             <div className="relative overflow-hidden rounded-[2rem] shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1200&auto=format&fit=crop"
+                src="https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162854/finmentor/about/why-financial-literacy-right.png"
                 alt="Students learning financial literacy together"
                 width={1200}
                 height={900}
@@ -160,11 +160,12 @@ export default function AboutPage() {
           />
           <div className="mt-12 overflow-hidden rounded-3xl">
             <Image
-              src="https://res.cloudinary.com/mzpdswax/image/upload/v1785112242/finmentor/about/meet-our-people.png"
+              src="https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162852/finmentor/about/meet-our-people-new.png"
               alt="FinMentor team"
               width={1200}
               height={600}
               className="w-full object-cover"
+              style={{ aspectRatio: '2/1', objectFit: 'cover' }}
             />
           </div>
           <div className="mt-10 text-center">

@@ -29,7 +29,7 @@ type HeaderProps = {
 }
 
 export function Header({
-  brandName = "Finmentor",
+  brandName = "FinMentor",
   logoUrl = "/logo.png",
   navigationItems,
   primaryCtaLabel = "Support Us",
