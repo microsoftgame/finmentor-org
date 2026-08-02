@@ -1,0 +1,33 @@
+{
+  "personId": "haoye-li",
+  "slug": "haoye-li",
+  "name": "Haoye Li",
+  "section": "department",
+  "sectionOrder": 2,
+  "profileOrder": 18,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "Director of Youth Financial Literacy Programs",
+  "school": "Irvine High School",
+  "tagline": "Empowering youth through financial education and community engagement.",
+  "bio": "Haoye Li serves as Director of Youth Financial Literacy Programs at FinMentor, supporting youth financial education initiatives and community engagement.",
+  "extendedBio": [
+    "Haoye Li serves as Director of Youth Financial Literacy Programs at FinMentor, where he supports financial education initiatives that help young people develop essential money management skills and financial awareness.",
+    "A student at Irvine High School, Haoye is also a dedicated clarinetist involved in his school's music programs. His interests in finance, music, and community service reflect his commitment to continuous learning, teamwork, and making a positive impact."
+  ],
+  "focusAreas": [
+    "Youth Education",
+    "Financial Literacy Programs",
+    "Community Service",
+    "Teamwork & Leadership"
+  ],
+  "programsLed": [
+    {
+      "name": "Youth Financial Literacy Program",
+      "detail": "Supporting financial education initiatives for young people."
+    }
+  ],
+  "approach": "Engaging youth through relatable content and hands-on activities builds lasting financial knowledge and confidence.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/haoye-li.jpg",
+  "photoAlt": "Haoye Li, Youth Financial Literacy Program Leader."
+}

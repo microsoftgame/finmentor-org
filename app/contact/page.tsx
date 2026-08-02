@@ -1,18 +1,14 @@
-import { Building, ChevronDown, Mail, MapPin, ShieldCheck } from "lucide-react"
+import { Building, Mail, MapPin, ShieldCheck } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { getPageMetadata } from "@/lib/cms-content"
 import { contactReasons } from "@/lib/site-data"
+import { ContactForm } from "@/components/ContactForm"
 
 export async function generateMetadata() {
-  return getPageMetadata("contact", {
+  return {
     title: "Contact FinMentor",
     description:
       "Contact FinMentor for partnerships, sponsorships, volunteer interest, media, and program questions.",
-  })
+  }
 }
 
 export default function ContactPage() {
@@ -87,66 +83,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="surface-panel lg:w-2/3">
-              <form className="space-y-8 p-8 md:p-12">
-                <div className="grid gap-8 md:grid-cols-2">
-                  <div>
-                    <Label htmlFor="fullName">
-                      Full Name <span className="text-red-500">*</span>
-                    </Label>
-                    <Input id="fullName" type="text" placeholder="John Smith" required />
-                  </div>
-                  <div>
-                    <Label htmlFor="organization">
-                      Organization <span className="font-normal text-slate-400">(Optional)</span>
-                    </Label>
-                    <Input id="organization" type="text" placeholder="School or Company Name" />
-                  </div>
-                </div>
-
-                <div>
-                  <Label htmlFor="email">
-                    Email Address <span className="text-red-500">*</span>
-                  </Label>
-                  <Input id="email" type="email" placeholder="johnsmith@example.com" required />
-                </div>
-
-                <div>
-                  <Label htmlFor="reason">
-                    Reason for Contact <span className="text-red-500">*</span>
-                  </Label>
-                  <div className="relative">
-                    <select
-                      id="reason"
-                      className="flex h-14 w-full appearance-none rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4 text-sm font-medium text-slate-900 outline-none transition-all focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
-                      defaultValue=""
-                      required
-                    >
-                      <option value="" disabled>
-                        Select a topic...
-                      </option>
-                      {contactReasons.map((reason) => (
-                        <option key={reason} value={reason.toLowerCase().replaceAll(" ", "-")}>
-                          {reason}
-                        </option>
-                      ))}
-                    </select>
-                    <ChevronDown className="pointer-events-none absolute right-5 top-1/2 size-5 -translate-y-1/2 text-slate-400" />
-                  </div>
-                </div>
-
-                <div>
-                  <Label htmlFor="message">
-                    Message <span className="text-red-500">*</span>
-                  </Label>
-                  <Textarea id="message" rows={5} placeholder="How can we help you?" required />
-                </div>
-
-                <Button type="submit" size="lg" className="h-14 w-full text-lg">
-                  Send Message
-                </Button>
-              </form>
-            </div>
+            <ContactForm reasons={contactReasons} />
           </div>
         </div>
       </section>

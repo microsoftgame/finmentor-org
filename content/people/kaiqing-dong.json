@@ -1,0 +1,33 @@
+{
+  "personId": "kaiqing-dong",
+  "slug": "kaiqing-dong",
+  "name": "Kaiqing Dong",
+  "section": "executive",
+  "sectionOrder": 1,
+  "profileOrder": 3,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "CFO and Treasurer",
+  "school": "Saddleback College",
+  "tagline": "Supporting responsible financial management and community engagement through creative stewardship.",
+  "bio": "Kaiqing Dong serves as Chief Financial Officer (CFO) and Treasurer at FinMentor, supporting the organization's financial planning and operational coordination. A Fine Art student at Saddleback College, she combines creativity with entrepreneurial experience as the co-founder of a vintage retail business and founder of a jewelry brand.",
+  "extendedBio": [
+    "Kaiqing Dong serves as Chief Financial Officer (CFO) and Treasurer at FinMentor, supporting financial planning and operational coordination. Her background in event operations, e-commerce, customer experience, and cross-cultural communication strengthens FinMentor's programs.",
+    "Her entrepreneurial experience as a business co-founder and brand founder brings practical financial insight to the organization's mission."
+  ],
+  "focusAreas": [
+    "Financial Planning",
+    "Operational Coordination",
+    "Cross-Cultural Communication",
+    "Entrepreneurial Stewardship"
+  ],
+  "programsLed": [
+    {
+      "name": "Financial Management Systems",
+      "detail": "Developing responsible financial processes for program delivery."
+    }
+  ],
+  "approach": "Combine creative thinking with practical financial stewardship to support sustainable community impact.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/kaiqing-dong.jpg",
+  "photoAlt": "Kaiqing Dong, CFO and Treasurer."
+}

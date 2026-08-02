@@ -3,14 +3,13 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowLeft, ArrowUpRight, GraduationCap, Mail } from "lucide-react"
 
-import { getSiteSettings } from "@/lib/cms-content"
-import { ourPeople, type PersonRecord } from "@/lib/site-data"
+import { getPersonBySlug, getPeople } from "@/lib/content"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const person = ourPeople.find((p) => p.slug === slug && p.showOnWebsite !== false)
+  const person = getPersonBySlug(slug)
   if (!person) return {}
   return {
     title: `${person.name} | FinMentor`,
@@ -18,8 +17,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 }
 
+export const dynamicParams = false
+
 export function generateStaticParams() {
-  return ourPeople
+  return getPeople()
     .filter((p) => p.showOnWebsite !== false)
     .map((p) => ({ slug: p.slug }))
 }
@@ -32,12 +33,11 @@ function getImageUrl(url: string | undefined, size: number) {
 
 export default async function PersonProfilePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const person = ourPeople.find((p) => p.slug === slug && p.showOnWebsite !== false)
+  const person = getPersonBySlug(slug)
   if (!person) {
     notFound()
   }
 
-  const settings = await getSiteSettings()
   const imgSrc = getImageUrl(person.photo, 400)
   const nameParts = person.name.split(" ")
   const firstName = nameParts[0]
@@ -77,7 +77,7 @@ export default async function PersonProfilePage({ params }: { params: Promise<{ 
                   />
                 ) : (
                   <div className="flex size-full items-center justify-center bg-gradient-to-br from-blue-600 to-blue-800 font-heading text-5xl font-bold text-white">
-                    {nameParts.map(n => n[0]).join("")}
+                    {nameParts.map((n) => n[0]).join("")}
                   </div>
                 )}
               </div>

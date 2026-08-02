@@ -1,0 +1,21 @@
+{
+  "slug": "international-volunteer",
+  "tag": "LEADERSHIP",
+  "title": "International Volunteer — Exploring China",
+  "summary": "Students supported a cross-cultural campus event while gaining practical experience in teamwork, communication, and community service.",
+  "audience": "High School & College Students",
+  "image": "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/programs/international-volunteer.jpg",
+  "alt": "Student volunteers collaborating at Saddleback College",
+  "accent": "bg-amber-500",
+  "bullets": [
+    "Event Support",
+    "Team Collaboration",
+    "Cross-Cultural Communication",
+    "Community Service"
+  ],
+  "overview": "FinMentor volunteers supported three cross-cultural workshops at Saddleback College, helping participants engage with topics related to Chinese culture, history, education, and economic development.",
+  "highlights": "Volunteers assisted with participant check-in, materials, event preparation, and on-site coordination during the three-day cultural exchange event held from March 11 to March 13.",
+  "date": "March 11–13, 2024",
+  "location": "Saddleback College",
+  "showOnWebsite": true
+}

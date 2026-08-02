@@ -1,0 +1,19 @@
+{
+  "slug": "money-smart-course-1",
+  "tag": "CURRICULUM",
+  "title": "Money Smart Financial Literacy Program",
+  "summary": "An introductory financial literacy program focused on practical money skills for high school students.",
+  "audience": "High School Students (Grades 9–12)",
+  "image": "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162834/finmentor/programs/program-image-for-substitution.png",
+  "alt": "Students in a classroom learning financial literacy",
+  "accent": "bg-blue-500",
+  "bullets": [
+    "Financial Decision-Making",
+    "Spending Awareness",
+    "Saving Strategies",
+    "Responsible Money Habits"
+  ],
+  "overview": "This course introduces practical financial concepts through interactive lessons, real-world examples, and classroom discussions. Students explore topics including spending, saving, consumer awareness, and responsible financial decision-making.",
+  "highlights": "Students participate in interactive discussions, real-life case studies, and collaborative activities that connect financial concepts with everyday situations. The course encourages critical thinking, responsible money habits, and confident financial decision-making.",
+  "showOnWebsite": true
+}

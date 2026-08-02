@@ -3,25 +3,29 @@ import Image from "next/image"
 import { ArrowUpRight } from "lucide-react"
 
 import { buttonVariants } from "@/components/ui/button"
-import { getPageMetadata, getSiteSettings } from "@/lib/cms-content"
+import { getPeople } from "@/lib/content"
 import {
-  ourPeople,
   ourPeopleSectionCopy,
   type PersonRecord,
   type PersonSection,
 } from "@/lib/site-data"
 import { cn } from "@/lib/utils"
 
+const SITE = {
+  brandName: "FinMentor",
+  siteUrl: "https://finmentors.org",
+}
+
 export async function generateMetadata() {
-  return getPageMetadata("leadership", {
-    title: "Our People | FinMentor Money Smart Organization",
+  return {
+    title: "Our People | FinMentor",
     description:
       "Meet the executive leaders, department leaders, and board of directors behind FinMentor's mission to advance financial literacy for students, families, and communities.",
-  })
+  }
 }
 
 function bySection(section: PersonSection) {
-  return ourPeople
+  return getPeople()
     .filter(
       (p) =>
         p.showOnWebsite !== false && p.status === "active" && p.section === section
@@ -30,13 +34,12 @@ function bySection(section: PersonSection) {
 }
 
 function allVisiblePeople() {
-  return ourPeople
+  return getPeople()
     .filter(
       (p) =>
         p.showOnWebsite !== false && p.status === "active" && p.section !== "board"
     )
     .sort((a, b) => {
-      // Sort by section order first (executive before department), then by profile order
       if (a.sectionOrder !== b.sectionOrder) {
         return a.sectionOrder - b.sectionOrder
       }
@@ -45,24 +48,21 @@ function allVisiblePeople() {
 }
 
 export default async function OurPeoplePage() {
-  const settings = await getSiteSettings()
-  const siteUrl = settings.siteUrl.replace(/\/$/, "")
-
   const allPeople = allVisiblePeople()
   const boardMembers = bySection("board")
 
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: settings.brandName,
-    url: siteUrl,
-    member: ourPeople
+    name: SITE.brandName,
+    url: SITE.siteUrl,
+    member: getPeople()
       .filter((p) => p.showOnWebsite !== false)
       .map((p) => ({
         "@type": "Person",
         name: p.name,
         jobTitle: p.primaryTitle,
-        url: `${siteUrl}/leadership/${p.slug}`,
+        url: `${SITE.siteUrl}/leadership/${p.slug}`,
       })),
   }
 
@@ -76,7 +76,7 @@ export default async function OurPeoplePage() {
       {/* ── Page Header ─────────────────────────────────────────── */}
       <header className="mx-auto max-w-6xl px-6 pb-16 pt-20 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-600">
-          {settings.brandName}
+          {SITE.brandName}
         </p>
         <h1 className="mt-4 font-heading text-5xl font-bold tracking-tight text-slate-900 md:text-6xl">
           Our People
@@ -186,7 +186,7 @@ function PersonCard({
           />
         ) : (
           <div className="flex size-full items-center justify-center bg-gradient-to-br from-slate-200 to-slate-300 font-heading text-2xl font-bold text-slate-400">
-            {person.name.split(" ").map(n => n[0]).join("")}
+            {person.name.split(" ").map((n) => n[0]).join("")}
           </div>
         )}
       </div>

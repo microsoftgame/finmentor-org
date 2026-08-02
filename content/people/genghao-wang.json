@@ -1,0 +1,40 @@
+{
+  "personId": "genghao-wang",
+  "slug": "genghao-wang",
+  "name": "Genghao Wang",
+  "section": "department",
+  "sectionOrder": 2,
+  "profileOrder": 17,
+  "status": "active",
+  "showOnWebsite": false,
+  "primaryTitle": "Assistant Treasurer / Deputy CFO",
+  "secondaryTitles": [
+    "Director of Volunteer Management"
+  ],
+  "school": "Portola High School",
+  "tagline": "Building tools and systems that connect volunteers with meaningful opportunities.",
+  "bio": "Genghao Wang serves as Assistant Treasurer (Deputy CFO) and Director of Volunteer Management at FinMentor. Since joining the Money Smart financial literacy program in 2024, he has volunteered in a variety of community initiatives.",
+  "extendedBio": [
+    "Genghao Wang serves as Assistant Treasurer (Deputy CFO) and Director of Volunteer Management at FinMentor. Since joining the Money Smart financial literacy program in 2024, he has volunteered in a variety of community initiatives.",
+    "In 2025, he began developing the FinMentor app to help schedule events, manage volunteers, and streamline student check-ins. Through his work in financial operations, volunteer management, and technology development, Genghao helps strengthen FinMentor's programs."
+  ],
+  "focusAreas": [
+    "Financial Operations",
+    "Volunteer Management",
+    "Technology Development",
+    "Event Coordination"
+  ],
+  "programsLed": [
+    {
+      "name": "FinMentor App Development",
+      "detail": "Event scheduling, volunteer management, and student check-in systems."
+    },
+    {
+      "name": "Volunteer Coordination",
+      "detail": "Managing volunteer schedules and community initiatives."
+    }
+  ],
+  "approach": "Thoughtful systems and reliable tools help volunteers focus on what matters most — making a difference in their communities.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/genghao-wang.jpg",
+  "photoAlt": "Genghao Wang, Assistant Treasurer and Director of Volunteer Management."
+}

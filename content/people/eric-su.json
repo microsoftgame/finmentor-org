@@ -1,0 +1,32 @@
+{
+  "personId": "eric-su",
+  "slug": "eric-su",
+  "name": "Eric Su",
+  "section": "department",
+  "sectionOrder": 2,
+  "profileOrder": 12,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "Director of Digital Marketing and Communications",
+  "tagline": "Leading digital outreach and communications that amplify FinMentor's mission.",
+  "bio": "Eric Su is the Director of Digital Marketing and Communications at FinMentor, where he leads the organization's digital outreach and communications. He has supported several FinMentor initiatives, including the Money Smart financial literacy series, by managing presentation technology and electronic equipment for community events.",
+  "extendedBio": [
+    "Eric Su is the Director of Digital Marketing and Communications at FinMentor, leading the organization's digital outreach and communications strategy.",
+    "He has supported several FinMentor initiatives by managing presentation technology and electronic equipment for community events."
+  ],
+  "focusAreas": [
+    "Digital Marketing",
+    "Communications Strategy",
+    "Event Technology",
+    "Content Development"
+  ],
+  "programsLed": [
+    {
+      "name": "Digital Communications",
+      "detail": "Managing digital presence and community outreach."
+    }
+  ],
+  "approach": "Clear, consistent communication amplifies the reach and impact of financial education.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/eric-su.jpg",
+  "photoAlt": "Eric Su, Director of Digital Marketing and Communications."
+}

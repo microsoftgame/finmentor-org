@@ -1,0 +1,33 @@
+{
+  "personId": "sylvan-jiao",
+  "slug": "sylvan-jiao",
+  "name": "Sylvan Jiao",
+  "section": "department",
+  "sectionOrder": 2,
+  "profileOrder": 14,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "Director of Educational Content Development",
+  "school": "Saddleback College",
+  "tagline": "Creating engaging educational materials that make financial literacy accessible.",
+  "bio": "Sylvan Jiao serves as Director of Educational Content Development at FinMentor, where he helps develop educational materials and support financial literacy programs for students and families. A student with strong interests in sociology and history, he enjoys exploring how people, communities, and ideas shape society.",
+  "extendedBio": [
+    "Sylvan Jiao serves as Director of Educational Content Development at FinMentor, helping develop educational materials and support financial literacy programs.",
+    "He is committed to creating engaging learning resources that make financial education more accessible and meaningful."
+  ],
+  "focusAreas": [
+    "Curriculum Development",
+    "Educational Materials",
+    "Content Creation",
+    "Community Education"
+  ],
+  "programsLed": [
+    {
+      "name": "Educational Content Initiative",
+      "detail": "Developing and refining financial literacy materials."
+    }
+  ],
+  "approach": "Effective educational content transforms complex financial concepts into accessible, practical knowledge.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/sylvan-jiao.jpg",
+  "photoAlt": "Sylvan Jiao, Director of Educational Content Development."
+}

@@ -1,0 +1,32 @@
+{
+  "personId": "nathan-wang",
+  "slug": "nathan-wang",
+  "name": "Nathan Wang",
+  "section": "department",
+  "sectionOrder": 2,
+  "profileOrder": 10,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "Assistant Treasurer and Director of Volunteer Management",
+  "tagline": "Supporting financial operations and volunteer coordination for FinMentor's programs.",
+  "bio": "Nathan Wang serves as Assistant Treasurer and Director of Volunteer Management at FinMentor. He supports financial operations and volunteer coordination for the organization's programs.",
+  "extendedBio": [
+    "Nathan Wang serves as Assistant Treasurer and Director of Volunteer Management at FinMentor. He supports financial operations while leading volunteer recruitment, training, and day-to-day coordination to ensure program success.",
+    "As Director of Volunteer Management, he oversees volunteer recruitment, training, and coordination efforts across all FinMentor programs."
+  ],
+  "focusAreas": [
+    "Financial Operations",
+    "Volunteer Coordination",
+    "Program Support",
+    "Team Organization"
+  ],
+  "programsLed": [
+    {
+      "name": "Volunteer Management System",
+      "detail": "Recruitment, training, and coordination for student and adult volunteers."
+    }
+  ],
+  "approach": "Well-coordinated volunteers are the heart of accessible community education.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/genghao-wang.jpg",
+  "photoAlt": "Nathan Wang, Assistant Treasurer and Director of Volunteer Management."
+}

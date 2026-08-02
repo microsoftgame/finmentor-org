@@ -1,0 +1,19 @@
+{
+  "slug": "from-passion-to-excellence",
+  "tag": "COMMUNITY",
+  "title": "From Passion to Excellence",
+  "summary": "An interactive workshop where students explored how personal interests can develop into meaningful skills through student stories, guest speakers, and group discussions.",
+  "audience": "Middle & High School Students",
+  "image": "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/programs/from-passion-to-excellence.jpg",
+  "alt": "Student panel discussion workshop",
+  "accent": "bg-emerald-500",
+  "bullets": [
+    "Discovering Personal Interests",
+    "Setting Meaningful Goals",
+    "Building Confidence",
+    "Exploring Future Opportunities"
+  ],
+  "overview": "Through student stories, guest presentations, and interactive discussions, participants explored how personal interests can grow into valuable skills, leadership experiences, and future academic or career opportunities.",
+  "highlights": "The workshop featured student panel discussions, guest speakers, audience Q&A, and real-life experiences that encouraged participants to reflect on their own interests and future development.",
+  "showOnWebsite": true
+}

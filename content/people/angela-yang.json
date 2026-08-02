@@ -1,0 +1,29 @@
+{
+  "personId": "angela-yang",
+  "slug": "angela-yang",
+  "name": "Angela Yang",
+  "section": "board",
+  "sectionOrder": 3,
+  "profileOrder": 1,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "Chair of the Board",
+  "tagline": "Dedicated to expanding access to education and empowering the next generation.",
+  "bio": "Angela was born in Shanghai, China. She came to the United States to pursue her master's degree in Journalism and then her doctoral degree in Higher Education Administration as an international student. She understands the struggles that international students encounter on and off campus and is excited to get to know students and help them achieve their educational goals in the U.S. Angela has traveled to many countries throughout Asia. She has been in the field of international education for 25 years and loves working with students from around the world. Angela currently works for Saddleback College as the Director of International Student Program.",
+  "extendedBio": [
+    "Angela was born in Shanghai, China. She came to the United States to pursue her master's degree in Journalism and then her doctoral degree in Higher Education Administration as an international student.",
+    "She understands the struggles that international students encounter on and off campus and is excited to get to know students and help them achieve their educational goals in the U.S.",
+    "Angela has traveled to many countries throughout Asia. She has been in the field of international education for 25 years and loves working with students from around the world.",
+    "Angela currently works for Saddleback College as the Director of International Student Program."
+  ],
+  "focusAreas": [
+    "International Education",
+    "Higher Education Administration",
+    "Student Development",
+    "Cross-Cultural Communication"
+  ],
+  "programsLed": [],
+  "approach": "Education has the power to transform lives, and every student deserves access to opportunities that help them thrive.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/v1785112239/finmentor/people/angela-yang.jpg",
+  "photoAlt": "Angela Yang, Chair of the Board."
+}

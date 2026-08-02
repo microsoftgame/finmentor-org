@@ -1,0 +1,25 @@
+{
+  "heroEyebrow": "FinMentor Programs",
+  "heroTitle": "Programs built for students, families, and communities.",
+  "heroSubtitle": "We make financial education accessible through engaging programs and practical resources, helping students, families, and communities build the knowledge and confidence to make informed financial decisions.",
+  "sectionHighlightsTitle": "Program & Event Highlights",
+  "sectionHighlightsSubtitle": "Stay informed about FinMentor programs, events, and community impact stories.",
+  "sectionUpcomingTitle": "Upcoming Opportunities",
+  "sectionUpcomingSubtitle": "Explore our upcoming courses, community visits, and volunteer opportunities.",
+  "impactImage": "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/impact-in-action",
+  "impactBadgeTitle": "Real World",
+  "impactBadgeSubtitle": "Financial Learning",
+  "impactTitle": "Impact in Action",
+  "impactSubtitle": "Every workshop, course, and community event creates meaningful outcomes. Explore stories, event highlights, and community milestones that show how financial education is making a difference.",
+  "impactBullets": [
+    "Students build financial knowledge, confidence, and practical money skills.",
+    "Volunteers develop leadership, communication, and community service experience.",
+    "Families and communities benefit from financial education that creates lasting impact."
+  ],
+  "ctaTitle": "Partner with us to create lasting community impact.",
+  "ctaSubtitle": "Schools, community organizations, and businesses can partner with FinMentor to expand access to practical financial education and create lasting impact.",
+  "ctaPrimaryLabel": "Partner With Us",
+  "ctaPrimaryHref": "/support",
+  "ctaSecondaryLabel": "Contact Us",
+  "ctaSecondaryHref": "/contact"
+}

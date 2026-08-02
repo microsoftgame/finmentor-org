@@ -1,0 +1,34 @@
+{
+  "personId": "leo-wang",
+  "slug": "leo-wang",
+  "name": "Leo Wang",
+  "section": "department",
+  "sectionOrder": 2,
+  "profileOrder": 15,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "Director of Finance Operations and Administration",
+  "school": "Saddleback College",
+  "tagline": "Supporting nonprofit operations and financial literacy event coordination.",
+  "bio": "Leo Wang is a volunteer with FinMentor, supporting the organization's nonprofit community education programs and financial literacy events. He works closely with fellow volunteers to help coordinate event operations and create a welcoming experience for community members.",
+  "extendedBio": [
+    "Leo Wang is the Director of Finance and Administration at FinMentor, supporting nonprofit community education programs and financial literacy events.",
+    "Currently pursuing a degree in Business Administration at Saddleback College with plans to transfer to UC Irvine, he focuses on business, finance, and community engagement."
+  ],
+  "focusAreas": [
+    "Finance Operations",
+    "Event Coordination",
+    "Community Service",
+    "Business Administration"
+  ],
+  "programsLed": [
+    {
+      "name": "Event Operations Support",
+      "detail": "Coordinating logistics for community education events."
+    }
+  ],
+  "approach": "Practical business skills support sustainable nonprofit operations and community impact.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/leo-wang.jpg",
+  "photoAlt": "Leo Wang, Director of Finance and Administration.",
+  "linkedin": "https://www.linkedin.com/in/leo-wang-37a48b422"
+}

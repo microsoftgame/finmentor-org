@@ -1,0 +1,33 @@
+{
+  "personId": "harry-zhu",
+  "slug": "harry-zhu",
+  "name": "Harry Qihao Zhu",
+  "section": "executive",
+  "sectionOrder": 1,
+  "profileOrder": 4,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "Secretary and Director of Community Relations and Outreach",
+  "school": "Saddleback College",
+  "tagline": "Connecting communities and strengthening organizational communication.",
+  "bio": "Harry Qihao Zhu serves as Secretary and Director of Community Relations and Outreach at FinMentor, where he supports organizational communication, community engagement, and outreach activities. He enjoys connecting with others and contributing to programs that bring students and families together.",
+  "extendedBio": [
+    "Harry Qihao Zhu serves as Secretary and Director of Community Relations and Outreach at FinMentor. He supports organizational communication, community engagement, and outreach activities.",
+    "Outside of FinMentor, Harry enjoys playing basketball, practicing the piano, and playing video games. These interests keep him active, creative, and engaged while helping him develop teamwork, discipline, and communication skills."
+  ],
+  "focusAreas": [
+    "Governance & Records",
+    "Community Relations",
+    "Outreach Activities",
+    "Organizational Communication"
+  ],
+  "programsLed": [
+    {
+      "name": "Community Partnership Initiative",
+      "detail": "Building relationships with schools and community organizations."
+    }
+  ],
+  "approach": "Clear communication and genuine relationship-building are the foundation of sustainable community partnerships.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/harry-zhu.jpg",
+  "photoAlt": "Harry Qihao Zhu, Secretary."
+}

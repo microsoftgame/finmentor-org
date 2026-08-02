@@ -1,0 +1,32 @@
+{
+  "personId": "michael-yang",
+  "slug": "michael-yang",
+  "name": "Michael Yang",
+  "section": "executive",
+  "sectionOrder": 1,
+  "profileOrder": 1,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "CEO and CTO",
+  "tagline": "Leading FinMentor's mission to advance financial literacy through technology and strategic execution.",
+  "bio": "Michael Yang serves as Chief Executive Officer (CEO) and Chief Technology Officer (CTO) at FinMentor, leading the organization's strategic direction, technology initiatives, data management, and digital platform development.",
+  "extendedBio": [
+    "Michael Yang serves as Chief Executive Officer (CEO) and Chief Technology Officer (CTO) at FinMentor. In his executive role he leads organizational strategy, coordinates team efforts, and represents FinMentor to partners and the broader community.",
+    "As CTO, he oversees the digital platforms and systems that enable program delivery, volunteer coordination, and educational resource management."
+  ],
+  "focusAreas": [
+    "Executive Leadership",
+    "Strategic Planning",
+    "Technology Strategy",
+    "Platform Development"
+  ],
+  "programsLed": [
+    {
+      "name": "Technology Infrastructure",
+      "detail": "Digital systems supporting program delivery and operations."
+    }
+  ],
+  "approach": "Build sustainable systems that scale FinMentor's impact through practical technology and thoughtful leadership.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/michael-yang.jpg",
+  "photoAlt": "Michael Yang, Chief Executive Officer."
+}

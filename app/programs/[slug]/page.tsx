@@ -5,89 +5,21 @@ import { ArrowLeft, ArrowRight, CheckCircle2, Calendar, Users } from "lucide-rea
 
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-
-// Program data - in production this would come from CMS
-const programsData: Record<string, {
-  tag: string
-  title: string
-  summary: string
-  audience: string
-  image: string
-  alt: string
-  accent: string
-  bullets: string[]
-  overview: string
-  highlights: string
-  date?: string
-  location?: string
-  additionalImages?: { src: string; alt: string; caption?: string }[]
-}> = {
-  "money-smart-course-1": {
-    tag: "CURRICULUM",
-    title: "Money Smart Financial Literacy Program",
-    summary: "An introductory financial literacy course focused on practical money skills for high school students.",
-    audience: "High School Students (Grades 9–12)",
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162834/finmentor/programs/program-image-for-substitution.png",
-    alt: "Students in a classroom learning financial literacy",
-    accent: "bg-blue-500",
-    bullets: [
-      "Understanding Financial Choices",
-      "Recognizing Spending Influences",
-      "Building Healthy Money Habits",
-      "Developing Financial Confidence",
-    ],
-    overview: "This course introduces practical financial concepts through interactive lessons, real-world examples, and classroom discussions. Students explore topics including spending, saving, consumer awareness, and responsible financial decision-making.",
-    highlights: "Students participate in interactive discussions, real-life case studies, and collaborative activities that connect financial concepts with everyday situations. The course encourages critical thinking, responsible money habits, and confident financial decision-making.",
-  },
-  "international-volunteer": {
-    tag: "LEADERSHIP",
-    title: "International Volunteer — Exploring China",
-    summary: "A one-time volunteer experience supporting cross-cultural workshops at Saddleback College through participant assistance and on-site event support.",
-    audience: "High School & College Students",
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/programs/international-volunteer.jpg",
-    alt: "Student volunteers collaborating at Saddleback College",
-    accent: "bg-amber-500",
-    bullets: [
-      "Event Support",
-      "Team Collaboration",
-      "Cross-Cultural Communication",
-      "Community Service",
-    ],
-    overview: "FinMentor volunteers supported three cross-cultural workshops at Saddleback College, helping participants engage with topics related to Chinese culture, history, education, and economic development.",
-    highlights: "Volunteers assisted with participant check-in, materials, event preparation, and on-site coordination during the three-day cultural exchange event held from March 11 to March 13.",
-    date: "March 11–13, 2024",
-    location: "Saddleback College",
-  },
-  "from-passion-to-excellence": {
-    tag: "COMMUNITY",
-    title: "From Passion to Excellence",
-    summary: "An interactive workshop where students explored how personal interests can develop into meaningful skills through student stories, guest speakers, and group discussions.",
-    audience: "Middle & High School Students",
-    image: "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/programs/from-passion-to-excellence.jpg",
-    alt: "Student panel discussion workshop",
-    accent: "bg-emerald-500",
-    bullets: [
-      "Discovering Personal Interests",
-      "Setting Meaningful Goals",
-      "Building Confidence",
-      "Exploring Future Opportunities",
-    ],
-    overview: "Through student stories, guest presentations, and interactive discussions, participants explored how personal interests can grow into valuable skills, leadership experiences, and future academic or career opportunities.",
-    highlights: "The workshop featured student panel discussions, guest speakers, audience Q&A, and real-life experiences that encouraged participants to reflect on their own interests and future development.",
-  },
-}
+import { getProgramBySlug, getProgramSlugs } from "@/lib/content"
 
 type ProgramDetailPageProps = {
   params: Promise<{ slug: string }>
 }
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
-  return Object.keys(programsData).map((slug) => ({ slug }))
+  return getProgramSlugs().map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({ params }: ProgramDetailPageProps) {
   const { slug } = await params
-  const program = programsData[slug]
+  const program = getProgramBySlug(slug)
 
   if (!program) {
     return {}
@@ -101,7 +33,7 @@ export async function generateMetadata({ params }: ProgramDetailPageProps) {
 
 export default async function ProgramDetailPage({ params }: ProgramDetailPageProps) {
   const { slug } = await params
-  const program = programsData[slug]
+  const program = getProgramBySlug(slug)
 
   if (!program) {
     notFound()

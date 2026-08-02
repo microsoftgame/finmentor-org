@@ -1,0 +1,36 @@
+{
+  "personId": "simao-shao",
+  "slug": "simao-shao",
+  "name": "Simon Shao",
+  "section": "executive",
+  "sectionOrder": 1,
+  "profileOrder": 2,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "Vice President and COO",
+  "tagline": "Programs, events, and volunteers — the operating rhythm behind FinMentor.",
+  "bio": "Simon Shao serves as Vice President and Chief Operating Officer (COO) at FinMentor, leading educational programs, community events, and volunteer engagement across the organization.",
+  "extendedBio": [
+    "Simon Shao serves as Vice President and Chief Operating Officer (COO), leading educational programs, community events, and volunteer engagement. His work spans program planning, event execution, volunteer recruitment, training, and on-site operations.",
+    "He has led several signature initiatives including the Money Smart financial literacy series and cross-cultural volunteer programs that strengthen community engagement."
+  ],
+  "focusAreas": [
+    "Program Leadership",
+    "Community Events",
+    "Volunteer Engagement",
+    "On-site Operations"
+  ],
+  "programsLed": [
+    {
+      "name": "Money Smart Financial Literacy Series",
+      "detail": "FinMentor's ongoing financial literacy series for students."
+    },
+    {
+      "name": "International Volunteer Program",
+      "detail": "Cross-cultural volunteer initiatives supporting community events."
+    }
+  ],
+  "approach": "Run programs the way you'd want them run for your own family — thoughtful, prepared, and welcoming.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/simao-shao.jpg",
+  "photoAlt": "Simon Shao, Vice President and COO."
+}

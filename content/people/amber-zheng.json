@@ -1,0 +1,34 @@
+{
+  "personId": "amber-zheng",
+  "slug": "amber-zheng",
+  "name": "Xinyun (Amber) Zheng",
+  "section": "department",
+  "sectionOrder": 2,
+  "profileOrder": 16,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "Director of Customer Service and Support",
+  "school": "JSerra Catholic High School",
+  "tagline": "Creating welcoming experiences for students, families, and community members.",
+  "bio": "Amber Zheng is the Director of Customer Service and Support at FinMentor, where she helps create a welcoming experience for students, families, and community members. She supports customer service initiatives while contributing to FinMentor's educational outreach and community engagement.",
+  "extendedBio": [
+    "Amber Zheng is the Director of Customer Service and Support at FinMentor, helping create welcoming experiences for students, families, and community members.",
+    "A student at JSerra Catholic High School with a strong interest in healthcare, she has developed valuable skills in communication, empathy, and teamwork through volunteer service."
+  ],
+  "focusAreas": [
+    "Customer Service",
+    "Community Support",
+    "Communication Skills",
+    "Educational Outreach"
+  ],
+  "programsLed": [
+    {
+      "name": "Participant Support Initiative",
+      "detail": "Ensuring positive experiences for program participants."
+    }
+  ],
+  "approach": "Every participant deserves a welcoming, supportive experience that encourages continued engagement.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/amber-zheng.jpg",
+  "photoAlt": "Amber Zheng, Director of Customer Service and Support.",
+  "linkedin": "https://www.linkedin.com/in/amber-zheng-24332140a"
+}

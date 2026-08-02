@@ -1,0 +1,29 @@
+{
+  "personId": "jason-wei",
+  "slug": "jason-wei",
+  "name": "Jason Wei",
+  "section": "board",
+  "sectionOrder": 3,
+  "profileOrder": 3,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "Secretary",
+  "tagline": "Applying 20+ years of technology and finance experience to empower communities.",
+  "bio": "Jason Wei brings over 20 years of extensive experience in internet technology and IT practices to FinMentor. Born in Yunnan, China, he began his career at Cisco China, where he developed deep expertise in technology infrastructure and enterprise solutions. Jason has been at the forefront of integrating AI technologies with financial services, applying his technical knowledge to create meaningful impact in the fintech space.",
+  "extendedBio": [
+    "Jason Wei brings over 20 years of extensive experience in internet technology and IT practices to FinMentor. Born in Yunnan, China, he began his career at Cisco China, where he developed deep expertise in technology infrastructure and enterprise solutions.",
+    "Jason has been at the forefront of integrating AI technologies with financial services, applying his technical knowledge to create meaningful impact in the fintech space.",
+    "Driven by a passion for community empowerment through education, Jason is committed to expanding financial literacy and digital inclusion across underserved communities.",
+    "He believes that technology and education are powerful tools for positive social change, and he brings this conviction to every aspect of his work with FinMentor."
+  ],
+  "focusAreas": [
+    "Technology Infrastructure",
+    "AI & FinTech",
+    "Digital Transformation",
+    "Community Empowerment"
+  ],
+  "programsLed": [],
+  "approach": "Technology and education are powerful tools for positive social change — when combined thoughtfully, they can transform communities.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/v1785112240/finmentor/people/jason-wei.jpg",
+  "photoAlt": "Jason Wei, Secretary."
+}

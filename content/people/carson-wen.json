@@ -1,0 +1,29 @@
+{
+  "personId": "carson-wen",
+  "slug": "carson-wen",
+  "name": "Carson Wen",
+  "section": "board",
+  "sectionOrder": 3,
+  "profileOrder": 2,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "Treasurer",
+  "tagline": "Committed to responsible financial stewardship and community service.",
+  "bio": "After graduating from university, I built a long career in business management, gaining extensive experience in organizational operations, team leadership, and strategic management. Ten years ago, I founded an international education consulting organization in the United States, dedicated to providing Chinese students with professional study-abroad planning and application services. Through these efforts, I have helped numerous students gain admission to outstanding overseas institutions and achieve their dreams of receiving an international education.",
+  "extendedBio": [
+    "After graduating from university, I built a long career in business management, gaining extensive experience in organizational operations, team leadership, and strategic management.",
+    "Ten years ago, I founded an international education consulting organization in the United States, dedicated to providing Chinese students with professional study-abroad planning and application services.",
+    "Through these efforts, I have helped numerous students gain admission to outstanding overseas institutions and achieve their dreams of receiving an international education.",
+    "At the same time, I have remained actively involved in community service and have long been committed to supporting new immigrants and their families as they integrate into American society."
+  ],
+  "focusAreas": [
+    "Business Management",
+    "Strategic Planning",
+    "International Education",
+    "Community Service"
+  ],
+  "programsLed": [],
+  "approach": "Education has the power to transform lives, community service strengthens and unites neighborhoods, and cultural diversity contributes to a more vibrant and inclusive society.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/v1785112240/finmentor/people/carson-wen.jpg",
+  "photoAlt": "Carson Wen, Treasurer."
+}

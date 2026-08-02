@@ -1,0 +1,28 @@
+{
+  "personId": "desmond-hong",
+  "slug": "desmond-hong",
+  "name": "Desmond Hong",
+  "section": "department",
+  "sectionOrder": 2,
+  "profileOrder": 11,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "Assistant Secretary and Director of Administration",
+  "school": "Valencia High School",
+  "tagline": "Supporting organizational coordination and administrative activities.",
+  "bio": "Desmond Hong serves as Assistant Secretary at FinMentor, supporting organizational coordination and administrative activities. A student at Valencia High School, he has developed a strong interest in personal finance through accounting coursework, the Young Investor Society, and UCI's Investments, Financial Planning & You (IFPY) program, where he built a virtual investment portfolio that achieved over 100% growth.",
+  "extendedBio": [
+    "Desmond Hong serves as Assistant Secretary at FinMentor, supporting organizational coordination and administrative activities.",
+    "A student at Valencia High School, he has developed a strong interest in personal finance through accounting coursework, the Young Investor Society, and UCI's IFPY program."
+  ],
+  "focusAreas": [
+    "Administrative Coordination",
+    "Organizational Support",
+    "Financial Education",
+    "Investment Knowledge"
+  ],
+  "programsLed": [],
+  "approach": "Attention to detail in administration ensures smooth operations that serve students and volunteers effectively.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/desmond-hong.jpg",
+  "photoAlt": "Desmond Hong, Assistant Secretary."
+}

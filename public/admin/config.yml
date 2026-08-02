@@ -1,0 +1,209 @@
+# Decap CMS 配置 —— FinMentor 官网
+# 编辑入口：https://finmentors.org/admin/
+# 内容以 JSON 文件提交到 github 仓库 microsoftgame/finmentor-front 的 content/ 目录，
+# 由 Cloudflare Pages 自动重新构建静态站。
+
+backend:
+  name: github
+  repo: microsoftgame/finmentor-front
+  branch: main
+  base_url: https://finmentors.org/api/auth
+  auth_endpoint: authorize
+  scope: repo
+
+# 媒体库：图片统一上传到 Cloudinary（unsigned preset，无需 secret）
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: mzpdswax
+    api_key: "295197468186968"
+    upload_preset: finmentor_unsigned
+
+publish_mode: simple
+locale: en
+
+# ---------------------------------------------------------------------------
+# 整页级文案（file collection）
+# ---------------------------------------------------------------------------
+collections:
+  - name: programsPage
+    label: "Programs 整页文案"
+    files:
+      - name: programs-page
+        label: "Programs 页面（Hero / 亮点 / Upcoming / Impact / CTA）"
+        file: content/programs-page.json
+        fields:
+          - { name: heroEyebrow, label: "Hero 小标题", widget: string }
+          - { name: heroTitle, label: "Hero 主标题", widget: string }
+          - { name: heroSubtitle, label: "Hero 副标题", widget: text }
+          - { name: sectionHighlightsTitle, label: "亮点区标题", widget: string }
+          - { name: sectionHighlightsSubtitle, label: "亮点区副标题", widget: text }
+          - { name: sectionUpcomingTitle, label: "Upcoming 区标题", widget: string }
+          - { name: sectionUpcomingSubtitle, label: "Upcoming 区副标题", widget: text }
+          - { name: impactImage, label: "Impact 侧边大图", widget: image }
+          - { name: impactBadgeTitle, label: "Impact 角标-大标题", widget: string }
+          - { name: impactBadgeSubtitle, label: "Impact 角标-小标题", widget: string }
+          - { name: impactTitle, label: "Impact 标题", widget: string }
+          - { name: impactSubtitle, label: "Impact 副标题", widget: text }
+          - name: impactBullets
+            label: "Impact 要点"
+            widget: list
+            field: { name: item, label: "要点", widget: string }
+          - { name: ctaTitle, label: "CTA 标题", widget: string }
+          - { name: ctaSubtitle, label: "CTA 副标题", widget: text }
+          - { name: ctaPrimaryLabel, label: "CTA 主按钮文字", widget: string }
+          - { name: ctaPrimaryHref, label: "CTA 主按钮链接", widget: string }
+          - { name: ctaSecondaryLabel, label: "CTA 次按钮文字", widget: string }
+          - { name: ctaSecondaryHref, label: "CTA 次按钮链接", widget: string }
+
+  # -------------------------------------------------------------------------
+  # Programs 项目（folder collection）
+  # -------------------------------------------------------------------------
+  - name: programs
+    label: "Programs 项目"
+    label_singular: "Program"
+    folder: content/programs
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - { name: slug, label: "Slug（文件名，勿含空格）", widget: string }
+      - name: tag
+        label: "分类标签"
+        widget: select
+        options: [CURRICULUM, LEADERSHIP, COMMUNITY, EVENT, PROGRAM, WORKSHOP]
+      - { name: title, label: "标题", widget: string }
+      - { name: summary, label: "列表简介", widget: text }
+      - { name: audience, label: "面向人群", widget: string }
+      - { name: image, label: "主图", widget: image }
+      - { name: alt, label: "图片 alt 描述", widget: string }
+      - name: accent
+        label: "配色（卡片角标/图标底色）"
+        widget: select
+        options:
+          - { label: "Blue 500", value: "bg-blue-500" }
+          - { label: "Amber 500", value: "bg-amber-500" }
+          - { label: "Emerald 500", value: "bg-emerald-500" }
+          - { label: "Blue 600", value: "bg-blue-600" }
+          - { label: "Emerald 600", value: "bg-emerald-600" }
+          - { label: "Amber 600", value: "bg-amber-600" }
+      - name: bullets
+        label: "要点（What Participants Learn）"
+        widget: list
+        field: { name: item, label: "要点", widget: string }
+      - { name: overview, label: "详情-概述", widget: text }
+      - { name: highlights, label: "详情-亮点", widget: text }
+      - { name: date, label: "日期（仅活动类，可选）", widget: string, required: false }
+      - { name: location, label: "地点（仅活动类，可选）", widget: string, required: false }
+      - { name: showOnWebsite, label: "在网站显示", widget: boolean, default: true }
+
+  # -------------------------------------------------------------------------
+  # Program 新闻 / 活动详情（folder collection）
+  # -------------------------------------------------------------------------
+  - name: programNews
+    label: "Program 新闻"
+    label_singular: "News"
+    folder: content/program-news
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - { name: slug, label: "Slug（文件名，勿含空格）", widget: string }
+      - name: category
+        label: "分类"
+        widget: select
+        options: [VISIT, WORKSHOP, EVENT, PROGRAM, COMPETITION, CLUB, MILESTONE]
+      - { name: title, label: "标题", widget: string }
+      - { name: date, label: "日期", widget: string }
+      - { name: image, label: "大图", widget: image }
+      - { name: excerpt, label: "简介", widget: text }
+      - { name: body, label: "正文（可选，留空则不显示）", widget: markdown, required: false }
+      - { name: showOnWebsite, label: "在网站显示", widget: boolean, default: true }
+      - { name: featured, label: "精选", widget: boolean, default: false }
+
+  # -------------------------------------------------------------------------
+  # Upcoming 机会（folder collection）
+  # -------------------------------------------------------------------------
+  - name: upcoming
+    label: "Upcoming 机会"
+    label_singular: "Upcoming"
+    folder: content/upcoming
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - { name: slug, label: "Slug（文件名，勿含空格）", widget: string }
+      - { name: title, label: "标题", widget: string }
+      - name: tag
+        label: "标签"
+        widget: select
+        options: [Fall Program, Community Visit, Volunteer]
+      - name: accent
+        label: "配色"
+        widget: select
+        options:
+          - { label: "Blue 600", value: "bg-blue-600" }
+          - { label: "Emerald 600", value: "bg-emerald-600" }
+          - { label: "Amber 600", value: "bg-amber-600" }
+      - { name: description, label: "描述", widget: text }
+      - { name: period, label: "时间", widget: string }
+      - { name: ctaLabel, label: "按钮文字", widget: string }
+      - { name: ctaHref, label: "按钮链接", widget: string }
+
+  # -------------------------------------------------------------------------
+  # 团队成员（folder collection）
+  # -------------------------------------------------------------------------
+  - name: people
+    label: "团队成员"
+    label_singular: "Person"
+    folder: content/people
+    slug: "{{slug}}"
+    create: true
+    fields:
+      - { name: personId, label: "Person ID（唯一）", widget: string }
+      - { name: slug, label: "Slug（文件名，通常同 Person ID）", widget: string }
+      - { name: name, label: "姓名", widget: string }
+      - name: section
+        label: "板块"
+        widget: select
+        options:
+          - { label: "Executive 领导层", value: "executive" }
+          - { label: "Department 部门", value: "department" }
+          - { label: "Board 董事会", value: "board" }
+      - { name: sectionOrder, label: "板块排序", widget: number }
+      - { name: profileOrder, label: "档案排序", widget: number }
+      - name: status
+        label: "状态"
+        widget: select
+        options:
+          - { label: "Active", value: "active" }
+          - { label: "Inactive", value: "inactive" }
+      - { name: showOnWebsite, label: "在网站显示（隐藏开关）", widget: boolean, default: true }
+      - { name: primaryTitle, label: "主职位", widget: string }
+      - name: secondaryTitles
+        label: "副职位（可选）"
+        widget: list
+        required: false
+        field: { name: item, label: "职位", widget: string }
+      - { name: school, label: "学校（可选）", widget: string, required: false }
+      - { name: boardRole, label: "董事会角色（可选）", widget: string, required: false }
+      - { name: founderNote, label: "创始人备注（可选）", widget: text, required: false }
+      - { name: tagline, label: "标语", widget: text }
+      - { name: bio, label: "简介", widget: text }
+      - name: extendedBio
+        label: "扩展简介段落"
+        widget: list
+        field: { name: item, label: "段落", widget: text }
+      - name: focusAreas
+        label: "专注领域"
+        widget: list
+        field: { name: item, label: "领域", widget: string }
+      - name: programsLed
+        label: "主导项目"
+        widget: list
+        summary: "{{fields.name}}"
+        fields:
+          - { name: name, label: "项目名", widget: string }
+          - { name: detail, label: "项目详情", widget: text }
+      - { name: approach, label: "理念 / Approach", widget: text }
+      - { name: photo, label: "照片", widget: image }
+      - { name: photoAlt, label: "照片 alt 描述", widget: string }
+      - { name: linkedin, label: "LinkedIn（可选）", widget: string, required: false }
+      - { name: joinedYear, label: "加入年份（可选）", widget: number, required: false }
