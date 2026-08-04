@@ -134,7 +134,7 @@ export const trustHighlights = [
   { title: "Registered U.S. Nonprofit", description: "Registered as a 501(c)(3) tax-exempt nonprofit." },
   { title: "Educational Mission", description: "Focused on advancing financial literacy and youth development." },
   { title: "Community-Rooted Programs", description: "Built with students and shaped by real community needs." },
-  { title: "Community-First Model", description: "All public programs are offered free of charge to participants." },
+  { title: "Community-First Model", description: "Core community programs are free to join; select advanced courses and competition training may carry a fee to sustain delivery." },
 ] as const
 
 export const leadershipSnapshot = [
