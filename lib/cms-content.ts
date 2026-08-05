@@ -188,6 +188,8 @@ const fallbackSiteSettings: SiteSettings = {
   defaultSeoTitle: "FinMentor | Youth Financial Education",
   defaultSeoDescription:
     "FinMentor provides accessible financial literacy learning opportunities for students, families, and communities.",
+  ogImageUrl:
+    "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/v1785162852/finmentor/about/meet-our-people-new.png",
   contactEmail: "contact@finmentors.org",
   navigationJson: navigationItems,
 }

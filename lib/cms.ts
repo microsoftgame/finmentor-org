@@ -12,7 +12,21 @@ type SonicCollectionResponse<T> = {
   data?: SonicContentItem<T>[]
 }
 
+// The legacy Sonic CMS has been decommissioned in favour of Decap CMS, which stores
+// all editable content as Git-tracked JSON under `content/`.
+//
+// Reads are hard-disabled here on purpose: as long as `CMS_API_BASE_URL` remains set in
+// a deploy environment (e.g. Cloudflare Pages), the old CMS would silently win over the
+// in-repo content at build time and serve stale navigation, footer links and homepage
+// blocks. Flipping this flag off makes every `getPublished*` helper fall through to the
+// fallbacks defined in `lib/site-data.ts` / `content/*.json`.
+const LEGACY_CMS_ENABLED = false
+
 function getCmsBaseUrl() {
+  if (!LEGACY_CMS_ENABLED) {
+    return undefined
+  }
+
   return process.env.CMS_API_BASE_URL?.replace(/\/$/, "")
 }
 

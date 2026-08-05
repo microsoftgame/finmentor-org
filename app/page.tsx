@@ -7,12 +7,24 @@ import { SectionHeading } from "@/components/SectionHeading"
 import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { getHomepageContent } from "@/lib/cms-content"
+import { getPrograms } from "@/lib/content"
 import { cn } from "@/lib/utils"
 
 export default async function HomePage() {
   const { hero, trustBar, impactStats, initiatives, appSection, fallback } = await getHomepageContent()
   const homeStats = (impactStats?.itemsJson?.length ? impactStats.itemsJson : fallback.homeStats) as typeof fallback.homeStats
-  const initiativeCards = (initiatives?.itemsJson?.length ? initiatives.itemsJson : fallback.initiativeCards) as typeof fallback.initiativeCards
+  // Core Initiatives 与 /programs 共用同一份内容（content/programs），
+  // 取前三个可见项目，顺序由 sortOrder 决定，避免两处文案/图片/顺序不一致。
+  const initiativeCards = getPrograms()
+    .slice(0, 3)
+    .map((program) => ({
+      title: program.title,
+      description: program.summary,
+      tag: program.tag,
+      image: program.image,
+      alt: program.alt,
+      href: `/programs/${program.slug}`,
+    }))
   const appFeatureList = (appSection?.itemsJson?.length ? appSection.itemsJson : fallback.appFeatureList) as typeof fallback.appFeatureList
 
   return (
@@ -28,7 +40,7 @@ export default async function HomePage() {
           </span>
         }
         subtitle={hero?.subtitle || "We make financial education accessible through engaging programs and practical resources, helping students, families, and communities build the knowledge and confidence to make informed financial decisions."}
-        backgroundImage={hero?.imageUrl || "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop"}
+        backgroundImage={hero?.imageUrl || "https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/impact-in-action"}
         actions={hero?.actionJson?.length ? [...hero.actionJson] : [
           { label: "Explore Programs", href: "/programs", variant: "brandGold" },
           { label: "Support Our Mission", href: "/support", variant: "glass" },

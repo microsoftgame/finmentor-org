@@ -28,6 +28,8 @@ export type Program = {
   date?: string
   location?: string
   additionalImages?: { src: string; alt: string; caption?: string }[]
+  /** 展示顺序，数字越小越靠前；留空则排在最后 */
+  sortOrder?: number
   showOnWebsite: boolean
 }
 
@@ -157,8 +159,19 @@ export function getProgramsPage(): ProgramsPageConfig {
   return readJsonFile<ProgramsPageConfig>("programs-page.json") ?? FALLBACK_PROGRAMS_PAGE
 }
 
+/**
+ * 返回对外可见的项目列表。
+ * - 过滤掉 Decap 里 showOnWebsite=false 的项目
+ * - 按 sortOrder 升序；未填 sortOrder 的排在后面，同序时保持文件名字母序（Array.sort 稳定）
+ * 首页 Core Initiatives 与 /programs 列表共用此函数，保证两处顺序与内容始终一致。
+ */
 export function getPrograms(): Program[] {
   return readCollection<Program>("programs")
+    .filter((p) => p.showOnWebsite !== false)
+    .sort(
+      (a, b) =>
+        (a.sortOrder ?? Number.MAX_SAFE_INTEGER) - (b.sortOrder ?? Number.MAX_SAFE_INTEGER),
+    )
 }
 
 export function getProgramNews(): ProgramNews[] {
@@ -175,8 +188,9 @@ export function getPeople(): PersonRecord[] {
   return fromContent.length > 0 ? fromContent : (ourPeople as PersonRecord[])
 }
 
+// 与 leadership 一致：隐藏的项目不生成详情页（配合 dynamicParams=false 直接 404）
 export function getProgramSlugs(): string[] {
-  return listSlugs("programs")
+  return getPrograms().map((p) => p.slug)
 }
 
 export function getProgramNewsSlugs(): string[] {

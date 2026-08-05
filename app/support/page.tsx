@@ -24,7 +24,7 @@ export default function SupportPage() {
       <section className="relative mx-4 overflow-hidden rounded-b-[3rem] bg-[#0a1128] py-32 text-white sm:mx-8">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+            src="https://res.cloudinary.com/mzpdswax/image/upload/f_auto,q_auto/finmentor/updates/entrepreneurship-competition.jpg"
             alt=""
             fill
             priority

@@ -94,7 +94,8 @@ collections:
       - { name: highlights, label: "详情-亮点", widget: text }
       - { name: date, label: "日期（仅活动类，可选）", widget: string, required: false }
       - { name: location, label: "地点（仅活动类，可选）", widget: string, required: false }
-      - { name: showOnWebsite, label: "在网站显示", widget: boolean, default: true }
+      - { name: sortOrder, label: "排序（数字越小越靠前；前三个会显示在首页 Core Initiatives）", widget: number, value_type: int, default: 99 }
+      - { name: showOnWebsite, label: "在网站显示（关闭后列表与详情页均隐藏）", widget: boolean, default: true }
 
   # -------------------------------------------------------------------------
   # Program 新闻 / 活动详情（folder collection）
