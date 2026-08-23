@@ -65,6 +65,7 @@ collections:
     folder: content/programs
     slug: "{{slug}}"
     create: true
+    extension: json
     fields:
       - { name: slug, label: "Slug（文件名，勿含空格）", widget: string }
       - name: tag
@@ -106,6 +107,7 @@ collections:
     folder: content/program-news
     slug: "{{slug}}"
     create: true
+    extension: json
     fields:
       - { name: slug, label: "Slug（文件名，勿含空格）", widget: string }
       - name: category
@@ -129,6 +131,7 @@ collections:
     folder: content/upcoming
     slug: "{{slug}}"
     create: true
+    extension: json
     fields:
       - { name: slug, label: "Slug（文件名，勿含空格）", widget: string }
       - { name: title, label: "标题", widget: string }
@@ -157,6 +160,7 @@ collections:
     folder: content/people
     slug: "{{slug}}"
     create: true
+    extension: json
     fields:
       - { name: personId, label: "Person ID（唯一）", widget: string }
       - { name: slug, label: "Slug（文件名，通常同 Person ID）", widget: string }
