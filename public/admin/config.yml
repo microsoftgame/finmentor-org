@@ -7,9 +7,9 @@ backend:
   name: github
   repo: microsoftgame/finmentor-front
   branch: main
-  base_url: https://finmentors.org/api/auth
-  auth_endpoint: authorize
-  scope: repo
+  # 使用 GitHub Personal Access Token (PAT) 登录（非 Netlify 托管站点推荐方式）
+  # 每个用户用自己的 PAT（需 repo 权限）登录，不共享 token
+  # 多人管理：每人生成独立 PAT，撤销某人权限只需 revoke 其 PAT
 
 # 媒体库：图片统一上传到 Cloudinary（unsigned preset，无需 secret）
 media_library:
