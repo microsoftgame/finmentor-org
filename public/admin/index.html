@@ -1,13 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>FinMentor CMS</title>
+    <link rel="icon" href="/favicon.ico" />
+    <style>
+      /* Sveltia CMS 自定义品牌：替换 logo / 标题 / 隐藏 GitHub 按钮 */
+      /* Sveltia 把登录页用 svelte 渲染到 <body>，组件类名通常以 svelte- 开头 */
+
+      /* 1) 全屏背景设为 FinMentor 蓝 */
+      body {
+        background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%) !important;
+        min-height: 100vh;
+      }
+
+      /* 2) 隐藏 GitHub OAuth 按钮 —— 用 :has() 选择器定位含 github 字样的按钮 */
+      button:has(svg[aria-label*="github" i]),
+      button:has(svg[aria-label*="GitHub"]),
+      button[aria-label*="GitHub" i],
+      a[aria-label*="GitHub" i],
+      button:has(> span:only-child) {
+        /* 仅对明确可识别的 GitHub 按钮生效 */
+      }
+
+      /* 更通用的方法：用 JS 隐藏 (见下方脚本) */
+    </style>
   </head>
   <body>
-    <!-- Sveltia CMS — Decap/Netlify CMS 的现代替代品，config.yml 100% 兼容 -->
+    <!-- Sveltia CMS -->
     <script src="https://unpkg.com/@sveltia/cms@latest/dist/sveltia-cms.js"></script>
+
+    <!-- 自定义：等 Sveltia 渲染登录页后，替换品牌 + 隐藏 GitHub 按钮 -->
+    <script>
+      (function () {
+        let done = false;
+        const customize = () => {
+          if (done) return;
+          // 1) 隐藏 GitHub OAuth 按钮 —— 找所有按钮，按文字判断
+          const buttons = document.querySelectorAll('button');
+          buttons.forEach((btn) => {
+            const txt = (btn.textContent || '').toLowerCase();
+            if (
+              txt.includes('github') ||
+              txt.includes('oauth') ||
+              (txt.includes('login with') && !txt.includes('token'))
+            ) {
+              // 完全隐藏 GitHub OAuth 按钮（保留 PAT 按钮）
+              btn.style.display = 'none !important';
+              btn.hidden = true;
+            }
+          });
+
+          // 2) 替换品牌名 "Sveltia CMS" → "FinMentor CMS"
+          // 找含 "Sveltia CMS" 文字的元素（通常是 h1 或 span）
+          const all = document.querySelectorAll('h1, h2, h3, span, div, p, strong, b');
+          all.forEach((el) => {
+            // 只处理叶子节点（直接含文字，没子元素）
+            if (
+              el.childNodes.length <= 3 &&
+              el.textContent.trim() === 'Sveltia CMS'
+            ) {
+              el.textContent = 'FinMentor CMS';
+            }
+          });
+
+          // 3) 替换 logo —— Sveltia 默认 logo 是 SVG，定位第一个 svg 或带特定类的元素
+          const logoCandidates = document.querySelectorAll(
+            'svg, img[src*="sveltia"], img[alt*="Sveltia" i], [class*="logo" i]'
+          );
+          logoCandidates.forEach((el) => {
+            // 只处理较大的 logo（不是图标按钮里的 svg）
+            const rect = el.getBoundingClientRect();
+            if (rect.width >= 60 && rect.width <= 200) {
+              // 用 FinMentor logo 替换
+              if (el.tagName === 'IMG') {
+                el.src = '/logo.png';
+                el.alt = 'FinMentor';
+              } else {
+                // SVG：用 img 覆盖
+                const img = document.createElement('img');
+                img.src = '/logo.png';
+                img.alt = 'FinMentor';
+                img.style.width = '120px';
+                img.style.height = 'auto';
+                el.parentNode && el.parentNode.replaceChild(img, el);
+              }
+            }
+          });
+
+          // 4) 修改浏览器标题
+          if (document.title.includes('Sveltia') || document.title === '') {
+            document.title = 'FinMentor CMS';
+          }
+        };
+
+        // 立即尝试 + 用 MutationObserver 监听后续 DOM 变化
+        customize();
+        const observer = new MutationObserver(() => {
+          if (!done) customize();
+          // 检测到登录页消失，停止重复
+          if (document.body && !document.querySelector('button')) {
+            done = true;
+            observer.disconnect();
+          }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        // 兜底：3 秒后停止尝试
+        setTimeout(() => {
+          done = true;
+          observer.disconnect();
+        }, 3000);
+      })();
+    </script>
   </body>
 </html>
