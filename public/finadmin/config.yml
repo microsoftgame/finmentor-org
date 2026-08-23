@@ -1,7 +1,11 @@
-# Decap CMS 配置 —— FinMentor 官网
-# 编辑入口：https://finmentors.org/admin/
+# Sveltia CMS 配置 —— FinMentor 官网
+# 编辑入口：https://finmentors.org/finadmin/  （隐藏路径，避免被扫描）
 # 内容以 JSON 文件提交到 github 仓库 microsoftgame/finmentor-front 的 content/ 目录，
 # 由 Cloudflare Pages 自动重新构建静态站。
+
+# 品牌自定义（Sveltia 原生支持，无需改 DOM）
+app_title: FinMentor CMS
+logo_url: /logo.png
 
 backend:
   name: github

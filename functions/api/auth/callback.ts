@@ -71,7 +71,7 @@ export async function onRequest(context: { request: Request; env: Env }) {
     window.close();
   } else {
     // fallback: 如果没有 opener，跳转到主窗口（正常不应该走到这里）
-    window.location.href = "${origin}/admin/#/auth/github/${accessToken}";
+    window.location.href = "${origin}/finadmin/#/auth/github/${accessToken}";
   }
 </script>
 <p>Authentication successful. You can close this window.</p>

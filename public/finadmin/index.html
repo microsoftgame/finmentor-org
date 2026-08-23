@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>FinMentor CMS</title>
+  </head>
+  <body>
+    <!-- Sveltia CMS —— config.yml 与本页同目录，Sveltia 自动加载 -->
+    <script src="https://unpkg.com/@sveltia/cms@latest/dist/sveltia-cms.js"></script>
+
+    <!--
+      仅隐藏 GitHub OAuth 按钮，保留「个人访问令牌 (PAT)」登录。
+      品牌（标题 / logo）已由 config.yml 的 app_title / logo_url 控制，无需此处处理。
+    -->
+    <script>
+      (function () {
+        function hideGitHubButton() {
+          const nodes = document.querySelectorAll('button, a');
+          nodes.forEach((el) => {
+            const text = (el.textContent || '').trim().toLowerCase();
+            const label = (el.getAttribute('aria-label') || '').toLowerCase();
+            const isGitHub =
+              (text.includes('github') || label.includes('github')) &&
+              !text.includes('token');
+            if (isGitHub) {
+              // 关键：必须用 setProperty 才能带 !important；直接给 style.display 赋
+              // 'none !important' 会被浏览器当作非法值而忽略（之前失败的原因）。
+              el.style.setProperty('display', 'none', 'important');
+            }
+          });
+        }
+
+        // Svelte 可能分批渲染，先用 observer 持续兜底，15s 后停止以释放资源。
+        hideGitHubButton();
+        const observer = new MutationObserver(hideGitHubButton);
+        observer.observe(document.documentElement, {
+          childList: true,
+          subtree: true,
+        });
+        setTimeout(() => observer.disconnect(), 15000);
+      })();
+    </script>
+  </body>
+</html>
