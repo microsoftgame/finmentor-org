@@ -1,0 +1,33 @@
+{
+  "personId": "alyssa",
+  "slug": "alyssa",
+  "name": "Alyssa",
+  "section": "department",
+  "sectionOrder": 2,
+  "profileOrder": 18,
+  "status": "active",
+  "showOnWebsite": true,
+  "primaryTitle": "Director of Youth Financial Literacy Programs",
+  "school": "Saddleback College",
+  "tagline": "Building practical financial knowledge and skills for young learners.",
+  "bio": "Alyssa serves as Director of Youth Financial Literacy Programs at FinMentor, where she supports financial education initiatives designed to help young people build practical knowledge and skills.",
+  "extendedBio": [
+    "Alyssa serves as Director of Youth Financial Literacy Programs at FinMentor, where she supports financial education initiatives designed to help young people build practical knowledge and skills for lifelong financial confidence.",
+    "A student at Saddleback College, Alyssa previously worked as a roadshow presenter in the ASDAN Business Competition, where her team earned a Silver Award. She has also contributed to AAUW by summarizing team papers. Her experience in public speaking, team coordination, summarization, and project execution supports her work in developing engaging educational programs for young learners."
+  ],
+  "focusAreas": [
+    "Youth Financial Literacy",
+    "Public Speaking",
+    "Team Coordination",
+    "Project Execution"
+  ],
+  "programsLed": [
+    {
+      "name": "Youth Financial Literacy Program",
+      "detail": "Supporting financial education initiatives for young people."
+    }
+  ],
+  "approach": "Engaging, well-coordinated programs built on clear communication help young learners develop lasting financial knowledge and confidence.",
+  "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/alyssa.jpg",
+  "photoAlt": "Alyssa, Director of Youth Financial Literacy Programs."
+}
