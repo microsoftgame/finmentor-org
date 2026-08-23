@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, Calendar } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { getProgramNewsBySlug, getProgramNewsSlugs } from "@/lib/content"
+import { renderNewsBody } from "@/lib/markdown"
 
 type ProgramNewsDetailPageProps = {
   params: Promise<{ slug: string }>
@@ -40,9 +41,7 @@ export default async function ProgramNewsDetailPage({ params }: ProgramNewsDetai
   }
 
   // 正文可选：为空则不渲染正文区
-  const bodyParagraphs = news.body?.trim()
-    ? news.body.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
-    : []
+  const bodyNodes = renderNewsBody(news.body)
 
   return (
     <div className="animate-in fade-in duration-500 pb-20 pt-24">
@@ -98,19 +97,10 @@ export default async function ProgramNewsDetailPage({ params }: ProgramNewsDetai
       </section>
 
       {/* Body Section (optional) */}
-      {bodyParagraphs.length > 0 && (
+      {bodyNodes.length > 0 && (
         <section className="mt-20 bg-slate-50 py-16">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-            <article className="space-y-6">
-              {bodyParagraphs.map((paragraph, index) => (
-                <p
-                  key={index}
-                  className="text-lg font-medium leading-relaxed text-slate-600"
-                >
-                  {paragraph}
-                </p>
-              ))}
-            </article>
+            <article className="space-y-6">{bodyNodes}</article>
           </div>
         </section>
       )}
