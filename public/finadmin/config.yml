@@ -1,6 +1,6 @@
 # Sveltia CMS 配置 —— FinMentor 官网
 # 编辑入口：https://finmentors.org/finadmin/  （隐藏路径，避免被扫描）
-# 内容以 JSON 文件提交到 github 仓库 microsoftgame/finmentor-front 的 content/ 目录，
+# 内容以 JSON 文件提交到 github 仓库 microsoftgame/finmentor-org 的 content/ 目录，
 # 由 Cloudflare Pages 自动重新构建静态站。
 
 # 品牌自定义（Sveltia 原生支持，无需改 DOM）
@@ -9,7 +9,7 @@ logo_url: /logo.png
 
 backend:
   name: github
-  repo: microsoftgame/finmentor-front
+  repo: microsoftgame/finmentor-org
   branch: main
   # 使用 GitHub Personal Access Token (PAT) 登录（非 Netlify 托管站点推荐方式）
   # 每个用户用自己的 PAT（需 repo 权限）登录，不共享 token
