@@ -6,6 +6,33 @@ export const navigationItems = [
   { label: "FinMentor App", href: "/app" },
 ] as const
 
+export const socialLinks = [
+  {
+    name: "YouTube",
+    handle: "@FinMentor",
+    href: "https://www.youtube.com/channel/UC-JW2VBtQgyb0FYDJw4IDEQ",
+    color: "hover:text-[#FF0000] hover:border-[#FF0000]/50 hover:bg-[#FF0000]/10",
+  },
+  {
+    name: "Instagram",
+    handle: "@finmentor_money_smart",
+    href: "https://www.instagram.com/finmentor_money_smart/",
+    color: "hover:text-[#E4405F] hover:border-[#E4405F]/50 hover:bg-[#E4405F]/10",
+  },
+  {
+    name: "Facebook",
+    handle: "FinMentor",
+    href: "https://www.facebook.com/profile.php?id=61593151631162",
+    color: "hover:text-[#1877F2] hover:border-[#1877F2]/50 hover:bg-[#1877F2]/10",
+  },
+  {
+    name: "TikTok",
+    handle: "@finmentors.org",
+    href: "https://www.tiktok.com/@finmentors.org",
+    color: "hover:text-white hover:border-slate-500 hover:bg-slate-800",
+  },
+] as const
+
 export const homeStats = [
   { value: "10+", label: "Programs Delivered", tone: "text-blue-600", surface: "bg-white", offset: false },
   { value: "300+", label: "Students Reached", tone: "text-amber-500", surface: "bg-white", offset: false },
@@ -96,10 +123,10 @@ export const journeySteps = [
       "FinMentor expanded beyond financial literacy by offering personal development workshops that encouraged students to discover their interests, develop their strengths, and prepare for future academic and career success.",
   },
   {
-    year: "May 2026",
-    title: "Visit to FDIC Headquarters",
+    year: "Sep 2026",
+    title: "FinMentor Presents at FDIC Headquarters",
     description:
-      "As a member of the FDIC Money Smart Alliance, FinMentor was invited to visit FDIC Headquarters, connect with financial education professionals, and explore new opportunities to expand its community financial literacy initiatives.",
+      "FinMentor's leadership delegation visited FDIC headquarters in Washington, D.C., to present the organization's initiatives and discuss challenges in expanding its reach with Assistant Director Ken Worthey and his colleagues, seeking guidance and support to advance financial education.",
   },
 ] as const
 

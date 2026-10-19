@@ -2,6 +2,7 @@ import { Building, Mail, MapPin, ShieldCheck } from "lucide-react"
 
 import { contactReasons } from "@/lib/site-data"
 import { ContactForm } from "@/components/ContactForm"
+import { SocialLinksList } from "@/components/SocialIcons"
 
 export async function generateMetadata() {
   return {
@@ -68,6 +69,15 @@ export default function ContactPage() {
                       <br />
                       Irvine, CA 92620
                     </p>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">
+                    Follow Our Channels
+                  </h4>
+                  <div className="mt-4">
+                    <SocialLinksList variant="contact" />
                   </div>
                 </div>
               </div>

@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ExternalLink, ShieldCheck } from "lucide-react"
 
 import type { SiteSettings } from "@/lib/cms-content"
+import { SocialLinksList } from "@/components/SocialIcons"
 import { cn } from "@/lib/utils"
 
 type FooterProps = {
@@ -46,9 +47,17 @@ export function Footer({ settings }: FooterProps) {
               {footer?.description ??
                 "FinMentor Money Smart Organization is a registered 501(c)(3) nonprofit committed to advancing financial literacy, student leadership, and community engagement."}
             </p>
-            <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-emerald-900/50 bg-emerald-950/30 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-emerald-400">
-              <ShieldCheck className="size-4" />
-              <span>Verified 501(c)(3) Nonprofit</span>
+            <div className="mt-8 flex flex-col gap-6">
+              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-900/50 bg-emerald-950/30 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-emerald-400">
+                <ShieldCheck className="size-4" />
+                <span>Verified 501(c)(3) Nonprofit</span>
+              </div>
+              <div>
+                <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-slate-300">
+                  Follow Us
+                </p>
+                <SocialLinksList variant="footer" />
+              </div>
             </div>
           </div>
 
