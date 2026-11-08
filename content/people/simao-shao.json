@@ -1,13 +1,17 @@
 {
   "personId": "simao-shao",
   "slug": "simao-shao",
-  "name": "Simon Shao",
+  "name": "Zhengxin (Simon) Shao",
   "section": "executive",
   "sectionOrder": 1,
   "profileOrder": 2,
   "status": "active",
   "showOnWebsite": true,
   "primaryTitle": "Vice President and COO",
+  "secondaryTitles": [],
+  "school": "",
+  "boardRole": "",
+  "founderNote": "",
   "tagline": "Programs, events, and volunteers — the operating rhythm behind FinMentor.",
   "bio": "Simon Shao serves as Vice President and Chief Operating Officer (COO) at FinMentor, leading educational programs, community events, and volunteer engagement across the organization.",
   "extendedBio": [
@@ -32,5 +36,7 @@
   ],
   "approach": "Run programs the way you'd want them run for your own family — thoughtful, prepared, and welcoming.",
   "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/simao-shao.jpg",
-  "photoAlt": "Simon Shao, Vice President and COO."
+  "photoAlt": "Simon Shao, Vice President and COO.",
+  "linkedin": "",
+  "joinedYear": null
 }
