@@ -1,13 +1,17 @@
 {
   "personId": "michael-yang",
   "slug": "michael-yang",
-  "name": "Michael Yang",
+  "name": "Ruilai (Michael) Yang",
   "section": "executive",
   "sectionOrder": 1,
   "profileOrder": 1,
   "status": "active",
   "showOnWebsite": true,
   "primaryTitle": "CEO and CTO",
+  "secondaryTitles": [],
+  "school": "",
+  "boardRole": "",
+  "founderNote": "",
   "tagline": "Leading FinMentor's mission to advance financial literacy through technology and strategic execution.",
   "bio": "Michael Yang serves as Chief Executive Officer (CEO) and Chief Technology Officer (CTO) at FinMentor, leading the organization's strategic direction, technology initiatives, data management, and digital platform development.",
   "extendedBio": [
@@ -28,5 +32,7 @@
   ],
   "approach": "Build sustainable systems that scale FinMentor's impact through practical technology and thoughtful leadership.",
   "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/michael-yang.jpg",
-  "photoAlt": "Michael Yang, Chief Executive Officer."
+  "photoAlt": "Michael Yang, Chief Executive Officer.",
+  "linkedin": "",
+  "joinedYear": null
 }
