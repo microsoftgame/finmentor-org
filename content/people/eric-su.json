@@ -1,13 +1,17 @@
 {
   "personId": "eric-su",
   "slug": "eric-su",
-  "name": "Eric Su",
+  "name": "Jiaheng (Eric) Su",
   "section": "department",
   "sectionOrder": 2,
   "profileOrder": 12,
   "status": "active",
   "showOnWebsite": true,
   "primaryTitle": "Director of Digital Marketing and Communications",
+  "secondaryTitles": [],
+  "school": "",
+  "boardRole": "",
+  "founderNote": "",
   "tagline": "Leading digital outreach and communications that amplify FinMentor's mission.",
   "bio": "Eric Su is the Director of Digital Marketing and Communications at FinMentor, where he leads the organization's digital outreach and communications. He has supported several FinMentor initiatives, including the Money Smart financial literacy series, by managing presentation technology and electronic equipment for community events.",
   "extendedBio": [
@@ -28,5 +32,7 @@
   ],
   "approach": "Clear, consistent communication amplifies the reach and impact of financial education.",
   "photo": "https://res.cloudinary.com/mzpdswax/image/upload/c_fill,w_300,h_400,f_auto,q_auto/finmentor/people/eric-su.jpg",
-  "photoAlt": "Eric Su, Director of Digital Marketing and Communications."
+  "photoAlt": "Eric Su, Director of Digital Marketing and Communications.",
+  "linkedin": "",
+  "joinedYear": null
 }
