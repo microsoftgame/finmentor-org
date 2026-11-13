@@ -4,6 +4,7 @@ import { ArrowRight, BookOpen, Calendar, GraduationCap, Heart, Users } from "luc
 
 import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { ProgramNewsGrid } from "@/components/ProgramNewsGrid"
 import { cn } from "@/lib/utils"
 import {
   getProgramsPage,
@@ -136,54 +137,11 @@ export default async function ProgramsPage() {
       {/* Latest Updates Section - Program & Event Highlights */}
       <section className="bg-white py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <h2 className="font-heading text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-                {page.sectionHighlightsTitle}
-              </h2>
-              <p className="mt-2 text-lg font-medium text-slate-600">
-                {page.sectionHighlightsSubtitle}
-              </p>
-            </div>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {news.map((update) => (
-              <Link
-                key={update.slug}
-                href={`/programs/news/${update.slug}`}
-                className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
-              >
-                <Card className="group h-full border-slate-200/70 bg-slate-50 overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)]">
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image
-                      src={update.image}
-                      alt={update.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <CardContent className="pt-4">
-                    <div className="mb-2 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-blue-600">
-                      <Calendar className="size-3" />
-                      {update.category}
-                    </div>
-                    <h3 className="font-heading text-lg font-bold leading-snug tracking-tight text-slate-900 line-clamp-2">
-                      {update.title}
-                    </h3>
-                    <p className="mt-2 text-sm text-slate-500 line-clamp-2">
-                      {update.excerpt}
-                    </p>
-                    <div className="mt-3 flex items-center gap-2 text-xs font-medium text-slate-400">
-                      <Calendar className="size-3" />
-                      {update.date}
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
+          <ProgramNewsGrid
+            news={news}
+            title={page.sectionHighlightsTitle}
+            subtitle={page.sectionHighlightsSubtitle}
+          />
         </div>
       </section>
 
